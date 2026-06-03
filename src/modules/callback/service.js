@@ -8,6 +8,7 @@ import notificationService from "../../services/notification.service.js";
 import userRepository from "../user/repository.js";
 import pascabayarRepository, { parseMetadata } from "../transaction/pascabayar/pascabayar.repository.js";
 import { applyPricingToCheckData, calculatePascabayarPricing } from "../transaction/pascabayar/pascabayar.pricing.js";
+import { buildPascabayarNote } from "../transaction/pascabayar/pascabayar.notes.js";
 
 // Inline pricing engine similar to transaction/service.js
 const pricingEngine = {
@@ -74,14 +75,26 @@ const updateUnifiedInquiryMetadata = async (transaction, partialBillData, extra 
         totalAmount: mergedBillData.totalAmount
     });
     const normalizedBillData = applyPricingToCheckData(product, mergedBillData);
+    const balance = await pascabayarRepository.getUserBalance(transaction.userId);
+    const nextStatus = metadata.stage === "PAYMENT_REQUESTED" ? (extra.status || transaction.status) : "PENDING";
+    const note = buildPascabayarNote({
+        transaction: {
+            ...transaction,
+            vendorTrxId: extra.providerTransactionId || metadata.providerTransactionId || transaction.vendorTrxId
+        },
+        product,
+        status: nextStatus,
+        message: extra.notes || transaction.notes,
+        balance
+    });
 
     await trxRepository.updateTransaction(transaction.id, {
-        status: metadata.stage === "PAYMENT_REQUESTED" ? (extra.status || transaction.status) : "PENDING",
+        status: nextStatus,
         vendorTrxId: extra.providerTransactionId || metadata.providerTransactionId || transaction.vendorTrxId,
         basePrice: pricing.providerTotal,
         markupPrice: pricing.markupAmount,
         totalPrice: pricing.totalAmount,
-        notes: extra.notes || transaction.notes,
+        notes: note,
         metadata: JSON.stringify({
             ...metadata,
             stage: metadata.stage === "PAYMENT_REQUESTED" ? "PAYMENT_COMPLETED" : "INQUIRY_COMPLETED",
@@ -147,9 +160,17 @@ const callbackService = {
         } else if (data.status === "FAILED") {
             const cleanedNotes = cleanMessage(data.message) || "Failed from vendor";
             if (unifiedPascabayar) {
+                const balance = await pascabayarRepository.getUserBalance(transaction.userId);
+                const product = await trxRepository.getProductById(transaction.productId);
                 await trxRepository.updateTransaction(transaction.id, {
                     status: "FAILED",
-                    notes: cleanedNotes,
+                    notes: buildPascabayarNote({
+                        transaction,
+                        product,
+                        status: "FAILED",
+                        message: cleanedNotes,
+                        balance
+                    }),
                     metadata: JSON.stringify({
                         ...parseMetadata(transaction.metadata),
                         paymentStatus: "FAILED",
@@ -288,9 +309,17 @@ const callbackService = {
         } else if (data.status === "FAILED") {
             const cleanedNotes = cleanMessage(data.message) || "Failed from vendor";
             if (unifiedPascabayar) {
+                const balance = await pascabayarRepository.getUserBalance(transaction.userId);
+                const product = await trxRepository.getProductById(transaction.productId);
                 await trxRepository.updateTransaction(transaction.id, {
                     status: "FAILED",
-                    notes: cleanedNotes,
+                    notes: buildPascabayarNote({
+                        transaction,
+                        product,
+                        status: "FAILED",
+                        message: cleanedNotes,
+                        balance
+                    }),
                     metadata: JSON.stringify({
                         ...metadata,
                         paymentStatus: "FAILED",
@@ -369,9 +398,17 @@ const callbackService = {
         } else if (isFailed) {
             const cleanedNotes = cleanMessage(message) || "Failed from vendor";
             if (unifiedPascabayar) {
+                const balance = await pascabayarRepository.getUserBalance(transaction.userId);
+                const product = await trxRepository.getProductById(transaction.productId);
                 await trxRepository.updateTransaction(transaction.id, {
                     status: "FAILED",
-                    notes: cleanedNotes,
+                    notes: buildPascabayarNote({
+                        transaction,
+                        product,
+                        status: "FAILED",
+                        message: cleanedNotes,
+                        balance
+                    }),
                     metadata: JSON.stringify({
                         ...metadata,
                         paymentStatus: "FAILED",

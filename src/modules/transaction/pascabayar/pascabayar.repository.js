@@ -111,6 +111,37 @@ const pascabayarRepository = {
             product: { id: transaction.productId, name: transaction.productName, sku: transaction.productSku },
             metadata: parseMetadata(transaction.metadata)
         };
+    },
+
+    findLatestByReferenceId: async (referenceId) => {
+        const [rows] = await pool.query(`
+            SELECT t.*, p.name as productName, p.sku as productSku
+            FROM transactions t
+            LEFT JOIN products p ON t.productId = p.id
+            WHERE JSON_UNQUOTE(JSON_EXTRACT(t.metadata, '$.providerRefId')) = ?
+            ORDER BY t.createdAt DESC
+            LIMIT 1
+        `, [referenceId]);
+
+        if (!rows.length) {
+            return null;
+        }
+
+        const transaction = rows[0];
+        return {
+            ...transaction,
+            product: { id: transaction.productId, name: transaction.productName, sku: transaction.productSku },
+            metadata: parseMetadata(transaction.metadata)
+        };
+    },
+
+    getUserBalance: async (userId) => {
+        const [rows] = await pool.query(
+            "SELECT SUM(amount) as total FROM balance_logs WHERE userId = ?",
+            [userId]
+        );
+
+        return Number(rows[0]?.total || 0);
     }
 };
 

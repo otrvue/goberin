@@ -4,6 +4,7 @@ import H2hPascabayarProvider from "./providers/h2h.pascabayar.provider.js";
 import { normalizePascabayarRequest, validatePascabayarProduct } from "./pascabayar.validator.js";
 import pascabayarRepository, { parseMetadata } from "./pascabayar.repository.js";
 import { applyPricingToCheckData, calculatePascabayarPricing } from "./pascabayar.pricing.js";
+import { buildPascabayarNote } from "./pascabayar.notes.js";
 
 const PROVIDERS = {
     DIGIFLAZZ: DigiflazzPascabayarProvider,
@@ -77,6 +78,23 @@ const normalizeCheckDataFromMetadata = (product, metadata) => {
     });
 };
 
+const buildExistingInquiryResponse = async (transaction, product, metadata) => {
+    const data = metadata.billData ? normalizeCheckDataFromMetadata(product, metadata) : undefined;
+
+    return {
+        success: false,
+        status: "DUPLICATE_REFERENCE_ID",
+        transactionId: transaction.id,
+        inquiryId: metadata.providerInquiryId || metadata.providerRefId,
+        message: "referenceId sudah digunakan, mengembalikan data transaksi yang sudah ada",
+        data,
+        error: {
+            code: "REFERENCE_ID_NOT_UNIQUE",
+            message: "referenceId sudah digunakan"
+        }
+    };
+};
+
 const loadTransactionContext = async (userId, transactionId) => {
     const transaction = await pascabayarRepository.getTransactionById(transactionId);
     if (!transaction) {
@@ -109,6 +127,13 @@ const PascabayarTransactionService = {
         }
 
         const product = validation.product;
+        const existingTransaction = await pascabayarRepository.findLatestByReferenceId(request.referenceId);
+        if (existingTransaction) {
+            const existingProduct = await pascabayarRepository.getProductBySku(existingTransaction.product?.sku || request.sku);
+            const existingMetadata = parseMetadata(existingTransaction.metadata);
+            return await buildExistingInquiryResponse(existingTransaction, existingProduct || product, existingMetadata);
+        }
+
         const provider = pickProvider(product.vendor);
         if (!provider?.inquiry) {
             return createSimpleError(`Provider ${product.vendor} belum memiliki handler inquiry`, "PROVIDER_HANDLER_MISSING");
@@ -132,11 +157,19 @@ const PascabayarTransactionService = {
                 pricing: initialPricing,
                 metadata: initialMetadata
             });
+            const currentBalance = await pascabayarRepository.getUserBalance(payload.userId);
 
             const providerResponse = await provider.inquiry({ request, product });
+            const vendorTrxId = providerResponse.data?.providerTransactionId || request.referenceId;
             await pascabayarRepository.updateTransaction(transaction.id, {
-                vendorTrxId: providerResponse.data?.providerTransactionId || request.referenceId,
-                notes: providerResponse.message || "Pascabayar Inquiry",
+                vendorTrxId,
+                notes: buildPascabayarNote({
+                    transaction: { ...transaction, vendorTrxId },
+                    product,
+                    status: "PENDING",
+                    message: providerResponse.message || "transaksi sedang di proses biller",
+                    balance: currentBalance
+                }),
                 metadata: {
                     ...initialMetadata,
                     transactionId: transaction.id,
@@ -195,11 +228,21 @@ const PascabayarTransactionService = {
             pricing,
             stage: product.vendor === "OKECONNECT" ? "INQUIRY_PENDING_CALLBACK" : "INQUIRY_COMPLETED"
         });
+        const currentBalance = await pascabayarRepository.getUserBalance(payload.userId);
 
         await pascabayarRepository.updateTransaction(transaction.id, {
             vendorTrxId: metadata.providerInquiryId || metadata.providerTransactionId || metadata.providerRefId,
             metadata,
-            notes: "Pascabayar Inquiry"
+            notes: buildPascabayarNote({
+                transaction: {
+                    ...transaction,
+                    vendorTrxId: metadata.providerInquiryId || metadata.providerTransactionId || metadata.providerRefId
+                },
+                product,
+                status: "PENDING",
+                message: providerResponse.message || "transaksi sedang di proses biller",
+                balance: currentBalance
+            })
         });
 
         return {
