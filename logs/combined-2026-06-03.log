@@ -443,3 +443,43 @@
 {"level":"info","message":"Background Postpaid Started (912d79ac-5d5a-4a87-8b99-ca0f6d354109)","timestamp":"2026-06-03T07:46:51.056Z"}
 {"level":"info","message":"\u001b[0mPOST /api/trx/postpaid/pay \u001b[32m200\u001b[0m 131.162 ms - 441\u001b[0m","timestamp":"2026-06-03T07:46:51.059Z"}
 {"level":"info","message":"Background Postpaid Success (912d79ac-5d5a-4a87-8b99-ca0f6d354109)","timestamp":"2026-06-03T07:46:51.741Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @114.10.155.156","timestamp":"2026-06-03T09:26:08.528Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @114.10.155.156","timestamp":"2026-06-03T09:26:08.529Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 978.396 ms - 639\u001b[0m","timestamp":"2026-06-03T09:26:09.228Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-03T11:33:28.893Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-03T11:33:28.902Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-03T11:33:29.942Z"}
+{"level":"info","message":"Email sent: <1ad6330d-8ec5-17cc-7da7-d2c591b3a135@cocogo.store>","timestamp":"2026-06-03T11:34:47.760Z"}
+{"level":"info","message":"User registered: velkaein (662a9777-4159-4e5b-bb38-1f280f0ee954)","timestamp":"2026-06-03T11:34:47.760Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/register \u001b[32m201\u001b[0m 9312.067 ms - 263\u001b[0m","timestamp":"2026-06-03T11:34:47.761Z"}
+{"level":"info","message":"Email sent: <638463cb-68ec-db86-5b7a-32e52e18addf@cocogo.store>","timestamp":"2026-06-03T11:36:15.346Z"}
+{"level":"info","message":"User registered: axdn (fd3f7e60-73c5-4115-a8e8-e0ab9c370010)","timestamp":"2026-06-03T11:36:15.347Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/register \u001b[32m201\u001b[0m 9128.951 ms - 257\u001b[0m","timestamp":"2026-06-03T11:36:15.347Z"}
+{"level":"info","message":"Email sent: <56a19107-e194-fcc3-9f19-f67b70c29a7d@goberin.store>","timestamp":"2026-06-03T11:39:00.418Z"}
+{"level":"info","message":"User registered: axdn (bf90eb24-c2c4-4b88-95a6-b35c6f058740)","timestamp":"2026-06-03T11:39:00.419Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/register \u001b[32m201\u001b[0m 9226.104 ms - 257\u001b[0m","timestamp":"2026-06-03T11:39:00.420Z"}
+{"level":"warn","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-06-03T11:40:37.830Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 103.231 ms - 95\u001b[0m","timestamp":"2026-06-03T11:40:37.832Z"}
+{"level":"info","message":"Database pool closed","timestamp":"2026-06-03T11:40:59.291Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-03T11:41:01.132Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-03T11:41:01.140Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-03T11:41:01.991Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-03T11:41:01.993Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-03T11:41:01.998Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-03T11:41:01.999Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/register \u001b[33m400\u001b[0m 9.604 ms - 176\u001b[0m","timestamp":"2026-06-03T11:42:19.998Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/register \u001b[33m400\u001b[0m 1.984 ms - 176\u001b[0m","timestamp":"2026-06-03T11:42:32.899Z"}
+{"level":"warn","message":"400 - Email already registered - /api/auth/register - POST - ::1","timestamp":"2026-06-03T11:42:46.988Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/register \u001b[33m400\u001b[0m 8.187 ms - 93\u001b[0m","timestamp":"2026-06-03T11:42:46.993Z"}
+{"level":"warn","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-06-03T11:43:01.495Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 148.274 ms - 95\u001b[0m","timestamp":"2026-06-03T11:43:01.496Z"}
+{"level":"info","message":"Email sent: <87248fec-4a76-eea5-5bd0-d6664033632e@goberin.store>","timestamp":"2026-06-03T11:43:17.659Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 9074.378 ms - 384\u001b[0m","timestamp":"2026-06-03T11:43:17.661Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-03T11:50:35.203Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-03T11:50:35.210Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-03T11:50:36.229Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-03T11:50:36.253Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-03T11:50:37.703Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-03T11:50:37.708Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-03T11:50:37.715Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-03T11:50:37.715Z"}

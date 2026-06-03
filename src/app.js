@@ -81,8 +81,7 @@ app.get("/", async (req, res) => {
             timestamp: new Date().toISOString(),
             contact: "@otrvue",
             server_ip: serverIp,
-            client_ip: req.ip || req.headers['x-forwarded-for'],
-            note: "Gunakan 'server_ip' untuk daftar whitelist di vendor (DigiFlazz/OkeConnect)."
+            client_ip: req.ip || req.headers['x-forwarded-for']
         }
     });
 });
