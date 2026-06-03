@@ -1,0 +1,9 @@
+.env 
+node_modules/*
+dist/*
+build/*
+package-lock.json
+logs/*
+*.log
+.DS_Store
+scripts/*
