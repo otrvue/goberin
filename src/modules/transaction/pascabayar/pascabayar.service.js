@@ -25,6 +25,14 @@ const createSimpleError = (message, code = "BAD_REQUEST", status = "PROVIDER_ERR
 
 const pickProvider = (vendor) => PROVIDERS[vendor];
 
+const toTransactionStatus = (status) => {
+    if (["SUCCESS", "FAILED", "NOT_FOUND", "REFUNDED"].includes(status)) {
+        return status;
+    }
+
+    return "PENDING";
+};
+
 const buildMetadata = ({ product, request, transactionId, providerResponse, pricing, stage, override = {} }) => ({
     flow: "PASCABAYAR_UNIFIED",
     stage,
@@ -182,7 +190,7 @@ const PascabayarTransactionService = {
 
             if (!providerResponse.success && providerResponse.status !== "PENDING") {
                 await pascabayarRepository.updateTransaction(transaction.id, {
-                    status: providerResponse.status,
+                    status: toTransactionStatus(providerResponse.status),
                     notes: providerResponse.message
                 });
                 return providerResponse;
@@ -335,7 +343,7 @@ const PascabayarTransactionService = {
             : undefined;
 
         await pascabayarRepository.updateTransaction(transaction.id, {
-            status: providerResponse.status,
+            status: toTransactionStatus(providerResponse.status),
             vendorTrxId: providerResponse.data?.providerTransactionId || transaction.vendorTrxId,
             metadata: {
                 ...metadata,
@@ -376,7 +384,9 @@ const PascabayarTransactionService = {
             return createSimpleError("Masih menunggu callback inquiry dari OKECONNECT", "INQUIRY_PENDING_CALLBACK");
         }
 
-        const providerPaymentRefId = metadata.providerPaymentRefId || transaction.id;
+        const providerPaymentRefId = product.vendor === "DIGIFLAZZ"
+            ? (metadata.providerInquiryId || metadata.providerRefId || transaction.vendorTrxId || transaction.id)
+            : (metadata.providerPaymentRefId || transaction.id);
         const providerResponse = await provider.payment({
             request: {
                 customerNo: transaction.customerNo,
@@ -395,7 +405,7 @@ const PascabayarTransactionService = {
             : normalizeCheckDataFromMetadata(product, metadata);
 
         await pascabayarRepository.updateTransaction(transaction.id, {
-            status: providerResponse.status,
+            status: toTransactionStatus(providerResponse.status),
             vendorTrxId: providerResponse.data?.providerTransactionId || transaction.vendorTrxId,
             basePrice: Number(responseData?.detail?.providerTotal || transaction.basePrice || 0),
             markupPrice: Number(responseData?.detail?.markupAmount || transaction.markupPrice || 0),
