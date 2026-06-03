@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import userRepository from "../modules/user/repository.js";
 import logger from "../config/logger.js";
+import { isDevVerificationBypassEnabled } from "../config/auth-flags.js";
 
 export const authenticate = async (req, res, next) => {
     try {
@@ -57,6 +58,10 @@ export const authenticate = async (req, res, next) => {
 };
 
 export const requireActiveStatus = (req, res, next) => {
+    if (isDevVerificationBypassEnabled()) {
+        return next();
+    }
+
     // Admin is always considered active for system routes
     if (req.user && (req.user.status === "ACTIVE" || req.user.role === "ADMIN")) {
         return next();

@@ -94,6 +94,22 @@ const digiflazz = {
         return response.data.data;
     },
 
+    postpaidStatus: async (sku, customerNo, refId, username = null, apiKey = null) => {
+        const u = username || process.env.DIGIFLAZZ_USERNAME;
+        const sign = digiflazz.generateSign(refId, u, apiKey);
+
+        const response = await axios.post(`${DIGIFLAZZ_URL}/transaction`, {
+            commands: "status-pasca",
+            username: u,
+            buyer_sku_code: sku,
+            customer_no: customerNo,
+            ref_id: refId,
+            sign,
+        });
+
+        return response.data.data;
+    },
+
     parseCallback: (payload, webhookId = null, webhookSecret = null, signature = null) => {
         const expectedHookId = webhookId || process.env.DIGIFLAZZ_WEBHOOK_ID;
         const secret = webhookSecret || process.env.DIGIFLAZZ_WEBHOOK_SECRET;

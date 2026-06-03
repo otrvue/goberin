@@ -1,5 +1,6 @@
 import trxService from "./service.js";
 import { z } from "zod";
+import PascabayarTransactionService from "./pascabayar/index.js";
 
 const prepaidSchema = z.object({
     productId: z.string().uuid().optional(),
@@ -18,6 +19,23 @@ const postpaidInquirySchema = z.object({
 }).refine(data => data.productId || data.sku, {
     message: "Either productId or sku must be provided",
     path: ["productId"]
+});
+
+const pascabayarRequestSchema = z.object({
+    customerNo: z.union([z.string(), z.number()]),
+    sku: z.string().min(1),
+    referenceId: z.string().min(1),
+    amount: z.number().positive().optional(),
+    adminFee: z.number().nonnegative().optional(),
+    buyerSkuCode: z.string().optional(),
+    customerName: z.string().optional(),
+    phone: z.string().optional(),
+    raw: z.unknown().optional(),
+    metadata: z.record(z.unknown()).optional(),
+});
+
+const pascabayarTransactionSchema = z.object({
+    transactionId: z.string().uuid(),
 });
 
 const bukaolshopSchema = z.object({
@@ -91,6 +109,54 @@ const trxController = {
                 message: "Pembayaran pascabayar sedang diproses",
                 data: result,
             });
+        } catch (error) {
+            if (error.name === "ZodError") {
+                return res.status(400).json({ success: false, message: "Validation Error", data: error.errors });
+            }
+            next(error);
+        }
+    },
+
+    pascabayarInquiry: async (req, res, next) => {
+        try {
+            const validatedData = pascabayarRequestSchema.parse(req.body);
+            const result = await PascabayarTransactionService.inquiry({
+                userId: req.user.id,
+                ...validatedData
+            });
+            return res.status(200).json(result);
+        } catch (error) {
+            if (error.name === "ZodError") {
+                return res.status(400).json({ success: false, message: "Validation Error", data: error.errors });
+            }
+            next(error);
+        }
+    },
+
+    pascabayarPayment: async (req, res, next) => {
+        try {
+            const validatedData = pascabayarTransactionSchema.parse(req.body);
+            const result = await PascabayarTransactionService.payment({
+                userId: req.user.id,
+                transactionId: validatedData.transactionId
+            });
+            return res.status(200).json(result);
+        } catch (error) {
+            if (error.name === "ZodError") {
+                return res.status(400).json({ success: false, message: "Validation Error", data: error.errors });
+            }
+            next(error);
+        }
+    },
+
+    pascabayarCheck: async (req, res, next) => {
+        try {
+            const validatedData = pascabayarTransactionSchema.parse(req.body);
+            const result = await PascabayarTransactionService.check({
+                userId: req.user.id,
+                transactionId: validatedData.transactionId
+            });
+            return res.status(200).json(result);
         } catch (error) {
             if (error.name === "ZodError") {
                 return res.status(400).json({ success: false, message: "Validation Error", data: error.errors });

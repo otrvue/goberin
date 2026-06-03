@@ -168,6 +168,7 @@ const trxService = {
         return transaction;
     },
 
+    // TODO: move to other file
     processPostpaidInquiry: async (userId, params) => {
         const { productId, sku, customerNo } = params;
         const [product, allMarkups] = await Promise.all([
@@ -379,6 +380,7 @@ const trxService = {
         }
     },
 
+    // TODO: move to other file
     processPostpaidPay: async (userId, params) => {
         const { productId, sku, customerNo } = params;
         const [product, allMarkups] = await Promise.all([

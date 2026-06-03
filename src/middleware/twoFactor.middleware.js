@@ -1,9 +1,14 @@
 import totpService from "../services/totp.service.js";
 import otpService from "../services/otp.service.js";
 import authRepository from "../modules/auth/repository.js";
+import { isDevVerificationBypassEnabled } from "../config/auth-flags.js";
 
 export const requireTwoFactor = async (req, res, next) => {
     try {
+        if (isDevVerificationBypassEnabled()) {
+            return next();
+        }
+
         const userId = req.user.id;
         const code = req.header("X-2FA-Code");
 

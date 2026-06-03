@@ -6,6 +6,7 @@ import emailService from "../../services/email.service.js";
 import otpService from "../../services/otp.service.js";
 import totpService from "../../services/totp.service.js";
 import logger from "../../config/logger.js";
+import { isDevVerificationBypassEnabled } from "../../config/auth-flags.js";
 
 const authService = {
     register: async (userData) => {
@@ -31,6 +32,20 @@ const authService = {
             password: hashedPassword,
             name,
         }, verificationToken);
+
+        if (isDevVerificationBypassEnabled()) {
+            await userRepository.updateVerificationStatus(user.id, true);
+
+            logger.info(`User registered with verification bypass: ${user.username} (${user.id})`);
+
+            return {
+                id: user.id,
+                username: user.username,
+                email: user.email,
+                name: user.name,
+                message: "Registrasi berhasil. Verifikasi email dan 2FA dilewati untuk mode development."
+            };
+        }
 
         // Send verification email (async, don't wait to respond to user if it's slow, but here we wait for simplicity or handle error)
         try {
@@ -106,7 +121,7 @@ const authService = {
         if (!isPasswordValid) throw { status: 401, message: "Invalid credentials", errorCode: "INVALID_CREDENTIALS" };
 
         // Check email verification
-        if (!user.isEmailVerified) {
+        if (!user.isEmailVerified && !isDevVerificationBypassEnabled()) {
             // Auto-resend verification email
             try {
                 const newToken = crypto.randomBytes(32).toString("hex");
@@ -123,12 +138,27 @@ const authService = {
             };
         }
 
+        if (!user.isEmailVerified && isDevVerificationBypassEnabled()) {
+            await userRepository.updateVerificationStatus(user.id, true);
+            user.isEmailVerified = 1;
+            user.status = "ACTIVE";
+        }
+
         // 2FA Logic
         const tempToken = jwt.sign(
             { userId: user.id, isTemp: true },
             process.env.JWT_SECRET,
             { expiresIn: "5m" }
         );
+
+        if (isDevVerificationBypassEnabled()) {
+            return {
+                requires2FA: true,
+                type: "DEV_BYPASS",
+                tempToken,
+                message: "Verifikasi email dan 2FA dilewati untuk mode development. Kirim tempToken ini ke /api/auth/login/verify dengan kode bebas."
+            };
+        }
 
         if (user.isTwoFactorEnabled) {
             return {
@@ -156,6 +186,17 @@ const authService = {
 
             const user = await userRepository.findAuthById(decoded.userId);
             if (!user) throw { status: 404, message: "User not found" };
+
+            if (isDevVerificationBypassEnabled()) {
+                const token = jwt.sign(
+                    { userId: user.id, role: user.role },
+                    process.env.JWT_SECRET,
+                    { expiresIn: process.env.JWT_EXPIRES_IN || "1d" }
+                );
+
+                const { password: _, ...userWithoutPassword } = user;
+                return { user: userWithoutPassword, token };
+            }
 
             let isValid = false;
             if (user.isTwoFactorEnabled) {

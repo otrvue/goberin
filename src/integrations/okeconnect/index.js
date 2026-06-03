@@ -37,6 +37,25 @@ const okeconnect = {
         return rawBody;
     },
 
+    checkStatus: async (sku, customerNo, refId, memberId = null, pin = null, password = null) => {
+        const mId = memberId || process.env.OKECONNECT_MEMBER_ID;
+        const p = pin || process.env.OKECONNECT_PIN;
+        const pass = password || process.env.OKECONNECT_PASSWORD;
+
+        const params = new URLSearchParams({
+            product: sku,
+            dest: customerNo,
+            refID: refId,
+            memberID: mId,
+            pin: p,
+            password: pass,
+            check: "1"
+        });
+
+        const response = await axios.get(`${OKECONNECT_TRX_URL}?${params.toString()}`);
+        return response.data;
+    },
+
     parseTrxResponse: (rawResponse) => {
         const trxId = rawResponse.match(/T#(\d+)/)?.[1];
         return { trxId };

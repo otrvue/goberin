@@ -6,6 +6,8 @@ import vendorConfigService from "../admin/vendorConfig.service.js";
 import outboundCallbackService from "../../services/callback.service.js";
 import notificationService from "../../services/notification.service.js";
 import userRepository from "../user/repository.js";
+import pascabayarRepository, { parseMetadata } from "../transaction/pascabayar/pascabayar.repository.js";
+import { applyPricingToCheckData, calculatePascabayarPricing } from "../transaction/pascabayar/pascabayar.pricing.js";
 
 // Inline pricing engine similar to transaction/service.js
 const pricingEngine = {
@@ -43,6 +45,61 @@ const cleanMessage = (message) => {
     return message.replace(/\.?\s*Saldo[:\s]*[\d.,]+/gi, "").trim();
 };
 
+const loadTransactionByProviderRef = async (providerRef) => {
+    let transaction = await trxRepository.getTransactionById(providerRef);
+    if (transaction) {
+        transaction.metadata = parseMetadata(transaction.metadata);
+        return transaction;
+    }
+
+    transaction = await pascabayarRepository.findByProviderReference(providerRef);
+    return transaction;
+};
+
+const isUnifiedPascabayar = (transaction) => {
+    const metadata = parseMetadata(transaction.metadata);
+    return metadata.flow === "PASCABAYAR_UNIFIED";
+};
+
+const updateUnifiedInquiryMetadata = async (transaction, partialBillData, extra = {}) => {
+    const product = await trxRepository.getProductById(transaction.productId);
+    const metadata = parseMetadata(transaction.metadata);
+    const mergedBillData = {
+        ...(metadata.billData || {}),
+        ...partialBillData
+    };
+    const pricing = calculatePascabayarPricing(product, {
+        billAmount: mergedBillData.billAmount,
+        adminFee: mergedBillData.adminFee,
+        totalAmount: mergedBillData.totalAmount
+    });
+    const normalizedBillData = applyPricingToCheckData(product, mergedBillData);
+
+    await trxRepository.updateTransaction(transaction.id, {
+        status: metadata.stage === "PAYMENT_REQUESTED" ? (extra.status || transaction.status) : "PENDING",
+        vendorTrxId: extra.providerTransactionId || metadata.providerTransactionId || transaction.vendorTrxId,
+        basePrice: pricing.providerTotal,
+        markupPrice: pricing.markupAmount,
+        totalPrice: pricing.totalAmount,
+        notes: extra.notes || transaction.notes,
+        metadata: JSON.stringify({
+            ...metadata,
+            stage: metadata.stage === "PAYMENT_REQUESTED" ? "PAYMENT_COMPLETED" : "INQUIRY_COMPLETED",
+            providerInquiryId: extra.providerInquiryId || metadata.providerInquiryId,
+            providerTransactionId: extra.providerTransactionId || metadata.providerTransactionId,
+            paymentStatus: extra.status || metadata.paymentStatus,
+            billData: normalizedBillData,
+            pricing: {
+                providerTotal: pricing.providerTotal,
+                markupAmount: pricing.markupAmount,
+                totalAmount: pricing.totalAmount,
+                markupType: pricing.markupType,
+                markupValue: pricing.markupValue
+            }
+        })
+    });
+};
+
 const callbackService = {
     handleDigiflazz: async (payload, signature = null) => {
         const creds = await vendorConfigService.getCredentials("DIGIFLAZZ");
@@ -56,7 +113,7 @@ const callbackService = {
 
         if (data.type !== "TRANSACTION") return;
 
-        const transaction = await trxRepository.getTransactionById(data.ref_id);
+        const transaction = await loadTransactionByProviderRef(data.ref_id);
         if (!transaction) {
             logger.warn(`DigiFlazz Callback: Transaction ${data.ref_id} not found`);
             return;
@@ -66,18 +123,42 @@ const callbackService = {
         if (transaction.status === "SUCCESS" || transaction.status === "REFUNDED") return;
 
         const user = await userRepository.findById(transaction.userId);
+        const unifiedPascabayar = isUnifiedPascabayar(transaction);
 
         if (data.status === "SUCCESS") {
             const cleanedNotes = cleanMessage(data.message) || "Success";
-            await trxRepository.updateTransaction(transaction.id, {
-                status: "SUCCESS",
-                sn: data.sn || "",
-                notes: cleanedNotes,
-            });
+            if (unifiedPascabayar) {
+                await updateUnifiedInquiryMetadata(transaction, {}, {
+                    status: "SUCCESS",
+                    providerTransactionId: data.ref_id,
+                    notes: cleanedNotes
+                });
+                await trxRepository.updateTransaction(transaction.id, {
+                    sn: data.sn || ""
+                });
+            } else {
+                await trxRepository.updateTransaction(transaction.id, {
+                    status: "SUCCESS",
+                    sn: data.sn || "",
+                    notes: cleanedNotes,
+                });
+            }
             await notificationService.sendAllNotifications(user, transaction, "SUCCESS", data.sn, cleanedNotes);
         } else if (data.status === "FAILED") {
             const cleanedNotes = cleanMessage(data.message) || "Failed from vendor";
-            await trxRepository.refundTransaction(transaction, cleanedNotes);
+            if (unifiedPascabayar) {
+                await trxRepository.updateTransaction(transaction.id, {
+                    status: "FAILED",
+                    notes: cleanedNotes,
+                    metadata: JSON.stringify({
+                        ...parseMetadata(transaction.metadata),
+                        paymentStatus: "FAILED",
+                        stage: "PAYMENT_COMPLETED"
+                    })
+                });
+            } else {
+                await trxRepository.refundTransaction(transaction, cleanedNotes);
+            }
             await notificationService.sendAllNotifications(user, transaction, "FAILED", null, cleanedNotes);
         }
 
@@ -89,7 +170,7 @@ const callbackService = {
         const data = okeconnect.parseCallback(query);
         if (!data) return;
 
-        const transaction = await trxRepository.getTransactionById(data.ref_id);
+        const transaction = await loadTransactionByProviderRef(data.ref_id);
         if (!transaction) {
             logger.warn(`OkeConnect Callback: Transaction ${data.ref_id} not found`);
             return;
@@ -99,10 +180,38 @@ const callbackService = {
         if (transaction.status === "SUCCESS" || transaction.status === "REFUNDED") return;
 
         const user = await userRepository.findById(transaction.userId);
+        const unifiedPascabayar = isUnifiedPascabayar(transaction);
+        const metadata = parseMetadata(transaction.metadata);
 
         if (data.status === "SUCCESS") {
             const cleanedNotes = cleanMessage(data.message) || "Success";
             let snValue = data.sn;
+
+            if (unifiedPascabayar && metadata.stage !== "PAYMENT_REQUESTED") {
+                const amountMatch = data.message.match(/TAG:(\d+)/i) || data.message.match(/Sebesar\s+Rp\.?\s*([\d\.]+)/i);
+                const adminMatch = data.message.match(/ADMIN?:?(\d+)/i);
+                const billAmount = amountMatch ? Number(amountMatch[1].replace(/\./g, "")) : 0;
+                const adminFee = adminMatch ? Number(adminMatch[1].replace(/\./g, "")) : 0;
+
+                await updateUnifiedInquiryMetadata(transaction, {
+                    customerName: metadata.billData?.customerName || null,
+                    productName: transaction.product?.name,
+                    billAmount,
+                    adminFee,
+                    totalAmount: billAmount + adminFee,
+                    detail: {
+                        message: cleanedNotes
+                    },
+                    providerStatus: "PENDING"
+                }, {
+                    providerInquiryId: metadata.providerInquiryId || data.ref_id,
+                    providerTransactionId: metadata.providerTransactionId || data.ref_id,
+                    notes: cleanedNotes
+                });
+
+                outboundCallbackService.sendCallback(transaction.id);
+                return;
+            }
 
             // If it was an inquiry request, try to extract amount and save in TTAG format for caching
             if (transaction.notes === "Inquiry Request") {
@@ -140,23 +249,57 @@ const callbackService = {
                         }),
                     });
                 } else {
+                    if (unifiedPascabayar) {
+                        await updateUnifiedInquiryMetadata(transaction, metadata.billData || {}, {
+                            status: "SUCCESS",
+                            providerTransactionId: metadata.providerTransactionId || data.ref_id,
+                            notes: cleanedNotes
+                        });
+                        await trxRepository.updateTransaction(transaction.id, {
+                            sn: snValue,
+                        });
+                    } else {
+                        await trxRepository.updateTransaction(transaction.id, {
+                            status: "SUCCESS",
+                            sn: snValue,
+                            notes: cleanedNotes,
+                        });
+                    }
+                }
+            } else {
+                if (unifiedPascabayar) {
+                    await updateUnifiedInquiryMetadata(transaction, metadata.billData || {}, {
+                        status: "SUCCESS",
+                        providerTransactionId: metadata.providerTransactionId || data.ref_id,
+                        notes: cleanedNotes
+                    });
+                    await trxRepository.updateTransaction(transaction.id, {
+                        sn: snValue,
+                    });
+                } else {
                     await trxRepository.updateTransaction(transaction.id, {
                         status: "SUCCESS",
                         sn: snValue,
                         notes: cleanedNotes,
                     });
                 }
-            } else {
-                await trxRepository.updateTransaction(transaction.id, {
-                    status: "SUCCESS",
-                    sn: snValue,
-                    notes: cleanedNotes,
-                });
             }
             await notificationService.sendAllNotifications(user, transaction, "SUCCESS", snValue, cleanedNotes);
         } else if (data.status === "FAILED") {
             const cleanedNotes = cleanMessage(data.message) || "Failed from vendor";
-            await trxRepository.refundTransaction(transaction, cleanedNotes);
+            if (unifiedPascabayar) {
+                await trxRepository.updateTransaction(transaction.id, {
+                    status: "FAILED",
+                    notes: cleanedNotes,
+                    metadata: JSON.stringify({
+                        ...metadata,
+                        paymentStatus: "FAILED",
+                        stage: metadata.stage === "PAYMENT_REQUESTED" ? "PAYMENT_COMPLETED" : metadata.stage
+                    })
+                });
+            } else {
+                await trxRepository.refundTransaction(transaction, cleanedNotes);
+            }
             await notificationService.sendAllNotifications(user, transaction, "FAILED", null, cleanedNotes);
         }
 
@@ -182,7 +325,7 @@ const callbackService = {
             return;
         }
 
-        const transaction = await trxRepository.getTransactionById(refId);
+        const transaction = await loadTransactionByProviderRef(refId);
         if (!transaction) {
             logger.warn(`H2H.id Callback: Transaction ${refId} not found`);
             return;
@@ -192,6 +335,8 @@ const callbackService = {
         if (transaction.status === "SUCCESS" || transaction.status === "REFUNDED") return;
 
         const user = await userRepository.findById(transaction.userId);
+        const unifiedPascabayar = isUnifiedPascabayar(transaction);
+        const metadata = parseMetadata(transaction.metadata);
 
         let isSuccess = ["success", "completed"].includes(status?.toLowerCase());
         let isFailed = ["failed", "rejected"].includes(status?.toLowerCase());
@@ -204,15 +349,38 @@ const callbackService = {
         }
 
         if (isSuccess) {
-            await trxRepository.updateTransaction(transaction.id, {
-                status: "SUCCESS",
-                sn: sn || "",
-                notes: cleanMessage(message) || "Success",
-            });
+            if (unifiedPascabayar) {
+                await updateUnifiedInquiryMetadata(transaction, metadata.billData || {}, {
+                    status: "SUCCESS",
+                    providerTransactionId: payload.invoice || metadata.providerTransactionId,
+                    notes: cleanMessage(message) || "Success"
+                });
+                await trxRepository.updateTransaction(transaction.id, {
+                    sn: sn || "",
+                });
+            } else {
+                await trxRepository.updateTransaction(transaction.id, {
+                    status: "SUCCESS",
+                    sn: sn || "",
+                    notes: cleanMessage(message) || "Success",
+                });
+            }
             await notificationService.sendAllNotifications(user, transaction, "SUCCESS", sn, cleanMessage(message));
         } else if (isFailed) {
             const cleanedNotes = cleanMessage(message) || "Failed from vendor";
-            await trxRepository.refundTransaction(transaction, cleanedNotes);
+            if (unifiedPascabayar) {
+                await trxRepository.updateTransaction(transaction.id, {
+                    status: "FAILED",
+                    notes: cleanedNotes,
+                    metadata: JSON.stringify({
+                        ...metadata,
+                        paymentStatus: "FAILED",
+                        stage: metadata.stage === "PAYMENT_REQUESTED" ? "PAYMENT_COMPLETED" : metadata.stage
+                    })
+                });
+            } else {
+                await trxRepository.refundTransaction(transaction, cleanedNotes);
+            }
             await notificationService.sendAllNotifications(user, transaction, "FAILED", null, cleanedNotes);
         }
 

@@ -21,6 +21,9 @@ router.get("/providers", dualAuth, trxController.getProviders);
 // Secured Routes
 router.use(dualAuth, requireActiveStatus);
 router.post("/prepaid", trxController.prepaid);
+router.post("/pascabayar/inquiry", trxController.pascabayarInquiry);
+router.post("/pascabayar/payment", trxController.pascabayarPayment);
+router.post("/pascabayar/check", trxController.pascabayarCheck);
 router.post("/postpaid/inquiry", trxController.postpaidInquiry);
 router.post("/postpaid/pay", trxController.postpaidPay);
 router.get("/history", trxController.getHistory);

@@ -1,5 +1,6 @@
 import authService from "./service.js";
 import { registerSchema, loginSchema, forgotPasswordSchema, resetPasswordSchema } from "./validation.js";
+import { isDevVerificationBypassEnabled } from "../../config/auth-flags.js";
 
 const authController = {
     register: async (req, res, next) => {
@@ -97,7 +98,7 @@ const authController = {
     verify2FA: async (req, res, next) => {
         try {
             const { tempToken, code } = req.body;
-            if (!tempToken || !code) {
+            if (!tempToken || (!code && !isDevVerificationBypassEnabled())) {
                 throw { status: 400, message: "Token dan kode verifikasi diperlukan" };
             }
 
