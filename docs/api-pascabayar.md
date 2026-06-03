@@ -1,14 +1,12 @@
-# API Pascabayar (Unified)
+# API Pascabayar (Unified Frontend Response)
 
 ## Base Path
-
-Seluruh endpoint pascabayar baru berada di bawah:
 
 ```text
 /api/trx/pascabayar
 ```
 
-Route yang tersedia:
+Route:
 
 * `POST /api/trx/pascabayar/inquiry`
 * `POST /api/trx/pascabayar/check`
@@ -27,64 +25,61 @@ Gunakan salah satu:
 * `Authorization: Bearer <token>`
 * `X-API-Key: <api-key>`
 
-## Flow Ringkas
+## Tujuan Response Unified
 
-### 1. Inquiry
+Walaupun provider berbeda, response utama ke frontend dibuat **seragam** agar frontend tidak perlu parsing format khusus per provider.
 
-Frontend mengirim:
+Field `raw` atau metadata internal boleh berbeda antar provider, tetapi **response data utama** ke frontend harus memakai bentuk yang sama.
 
-```json
-{
-  "customerNo": "413760800025",
-  "sku": "PLN-POSTPAID",
-  "referenceId": "TRX-123"
-}
-```
+## Shape Response Data yang Dipakai Frontend
 
-Backend akan:
-
-1. validasi produk dari database berdasarkan `sku`
-2. panggil provider sesuai `vendor`
-3. buat transaksi pascabayar sementara di tabel `transactions`
-4. simpan metadata provider ke `transactions.metadata`
-5. return response ringan berisi `transactionId`
-
-### 2. Check
-
-Frontend hanya mengirim:
+Semua endpoint pascabayar akan menggunakan `data` seperti ini:
 
 ```json
 {
-  "transactionId": "uuid-transaction"
+  "billStatus": "PENDING",
+  "customerName": "B*H*X*",
+  "billAmount": 78844,
+  "adminFee": 2500,
+  "totalAmount": 81344,
+  "tarif": "-",
+  "lembar_tagihan": 1,
+  "alamat": "-",
+  "detail": [
+    {
+      "periode": "062026",
+      "nilai_tagihan": "77180.0",
+      "admin": "2500",
+      "denda": "0.0",
+      "meter_awal": "0",
+      "meter_akhir": "0",
+      "biaya_lain": "0"
+    }
+  ],
+  "notes": "T#..."
 }
 ```
 
-Backend akan:
+### Arti field
 
-1. ambil transaction dari database
-2. baca `vendor`, `vendorSku`, `customerNo`, `providerRefId`, dan metadata lain dari transaction
-3. ambil data inquiry/tagihan dari metadata atau provider
-4. return response unified dengan `totalAmount` final yang sudah termasuk markup
+* `billStatus`: status tagihan/transaksi unified (`PENDING`, `SUCCESS`, `FAILED`, `NOT_FOUND`, `DUPLICATE_REFERENCE_ID`, dst.)
+* `customerName`: nama pelanggan jika tersedia
+* `billAmount`: nominal tagihan utama
+* `adminFee`: admin fee dari provider
+* `totalAmount`: total final ke frontend, sudah termasuk markup backend
+* `tarif`: tarif pelanggan jika ada
+* `lembar_tagihan`: jumlah lembar tagihan jika ada
+* `alamat`: alamat pelanggan jika ada
+* `detail`: detail tagihan per periode / field mentah yang relevan
+* `notes`: catatan transaksi terformat backend
 
-### 3. Payment
+## Aturan Error
 
-Frontend hanya mengirim:
+* `error` **hanya muncul jika benar-benar error**
+* jika `referenceId` duplikat, **jangan tampilkan `error`**
+* jika provider sedang pending callback, `error` tidak muncul
 
-```json
-{
-  "transactionId": "uuid-transaction"
-}
-```
-
-Backend akan:
-
-1. ambil transaction dari database
-2. ambil `vendor`, `customerNo`, `inquiryId`, dan metadata lain dari transaction
-3. proses pembayaran ke provider
-4. update transaction dan metadata
-5. return response unified sederhana
-
-## 1. Inquiry API
+## 1. Inquiry
 
 ### Route
 
@@ -97,36 +92,96 @@ POST /api/trx/pascabayar/inquiry
 ```json
 {
   "customerNo": "413760800025",
-  "sku": "PLN-POSTPAID",
+  "sku": "P001-PDAMKPL",
   "referenceId": "TRX-123"
 }
 ```
 
-### Field wajib
-
-* `customerNo`
-* `sku`
-* `referenceId`
-
-### Catatan
-
-* `customerNo` akan dinormalisasi menjadi string
-* jangan kirim `vendorSku`, `vendor`, atau `type` dari frontend
-* semua data provider diambil dari database berdasarkan `sku`
-
-### Response sukses
+### Response sukses inquiry langsung (mis. DIGIFLAZZ / H2H)
 
 ```json
 {
   "success": true,
   "status": "PENDING",
-  "transactionId": "f4c1f1df-c0a2-4b2d-a2e0-9f9a0cfab123",
+  "transactionId": "bcbd9e97-90c2-44e0-9f7c-86b8657378ac",
   "inquiryId": "TRX-123",
-  "message": "Inquiry berhasil"
+  "message": "Inquiry berhasil",
+  "data": {
+    "billStatus": "PENDING",
+    "customerName": "B*H*X*",
+    "billAmount": 78844,
+    "adminFee": 2500,
+    "totalAmount": 81344,
+    "tarif": "-",
+    "lembar_tagihan": 1,
+    "alamat": "-",
+    "detail": [
+      {
+        "periode": "062026",
+        "nilai_tagihan": "77180.0",
+        "admin": "2500",
+        "denda": "0.0",
+        "meter_awal": "0",
+        "meter_akhir": "0",
+        "biaya_lain": "0"
+      }
+    ],
+    "notes": "T#bcbd9e97-90c2-44e0-9f7c-86b8657378ac R#TRX-123 Cek pdam palembang P001-PDAMKPL.413760800025 Pending Ket:Transaksi Sukses @03/06 14:34. Saldo 6.500"
+  }
 }
 ```
 
-### Response gagal: invalid product
+### Response inquiry OKECONNECT yang masih menunggu callback
+
+```json
+{
+  "success": true,
+  "status": "PENDING",
+  "transactionId": "bcbd9e97-90c2-44e0-9f7c-86b8657378ac",
+  "inquiryId": "TRX-123",
+  "message": "Inquiry berhasil, menunggu callback provider",
+  "data": {
+    "billStatus": "PENDING",
+    "notes": "T#bcbd9e97-90c2-44e0-9f7c-86b8657378ac R#TRX-123 Cek pdam palembang P001-PDAMKPL.413760800025 Pending Ket:transaksi sedang di proses biller @03/06 14:34. Saldo 6.500"
+  }
+}
+```
+
+### Response duplicate referenceId
+
+```json
+{
+  "success": true,
+  "status": "DUPLICATE_REFERENCE_ID",
+  "transactionId": "bcbd9e97-90c2-44e0-9f7c-86b8657378ac",
+  "inquiryId": "TRX-123",
+  "message": "referenceId sudah digunakan, mengembalikan data transaksi yang sudah ada",
+  "data": {
+    "billStatus": "PENDING",
+    "customerName": "B*H*X*",
+    "billAmount": 78844,
+    "adminFee": 2500,
+    "totalAmount": 81344,
+    "tarif": "-",
+    "lembar_tagihan": 1,
+    "alamat": "-",
+    "detail": [
+      {
+        "periode": "062026",
+        "nilai_tagihan": "77180.0",
+        "admin": "2500",
+        "denda": "0.0",
+        "meter_awal": "0",
+        "meter_akhir": "0",
+        "biaya_lain": "0"
+      }
+    ],
+    "notes": "T#bcbd9e97-90c2-44e0-9f7c-86b8657378ac R#TRX-123 Cek pdam palembang P001-PDAMKPL.413760800025 Pending Ket:Transaksi Sukses @03/06 14:34. Saldo 6.500"
+  }
+}
+```
+
+### Response invalid product
 
 ```json
 {
@@ -144,27 +199,7 @@ POST /api/trx/pascabayar/inquiry
 }
 ```
 
-### Response gagal: provider error
-
-```json
-{
-  "success": false,
-  "status": "PROVIDER_ERROR",
-  "action": "INQUIRY",
-  "referenceId": "TRX-123",
-  "provider": "DIGIFLAZZ",
-  "sku": "PLN-POSTPAID",
-  "vendorSku": "pln",
-  "customerNo": "413760800025",
-  "message": "Provider error",
-  "error": {
-    "code": "PROVIDER_ERROR",
-    "message": "Provider error"
-  }
-}
-```
-
-## 2. Check API
+## 2. Check
 
 ### Route
 
@@ -176,7 +211,7 @@ POST /api/trx/pascabayar/check
 
 ```json
 {
-  "transactionId": "f4c1f1df-c0a2-4b2d-a2e0-9f9a0cfab123"
+  "transactionId": "bcbd9e97-90c2-44e0-9f7c-86b8657378ac"
 }
 ```
 
@@ -186,45 +221,48 @@ POST /api/trx/pascabayar/check
 {
   "success": true,
   "status": "PENDING",
-  "transactionId": "f4c1f1df-c0a2-4b2d-a2e0-9f9a0cfab123",
+  "transactionId": "bcbd9e97-90c2-44e0-9f7c-86b8657378ac",
   "data": {
-    "customerName": "John Doe",
-    "productName": "PLN Pascabayar",
-    "billAmount": 100000,
+    "billStatus": "PENDING",
+    "customerName": "B*H*X*",
+    "billAmount": 78844,
     "adminFee": 2500,
-    "totalAmount": 105000,
-    "period": "JUN 2026",
-    "dueDate": "2026-06-20",
-    "detail": {
-      "providerTotal": 102500,
-      "markupType": "FIXED",
-      "markupValue": 2500,
-      "markupAmount": 2500
-    }
+    "totalAmount": 81344,
+    "tarif": "-",
+    "lembar_tagihan": 1,
+    "alamat": "-",
+    "detail": [
+      {
+        "periode": "062026",
+        "nilai_tagihan": "77180.0",
+        "admin": "2500",
+        "denda": "0.0",
+        "meter_awal": "0",
+        "meter_akhir": "0",
+        "biaya_lain": "0"
+      }
+    ],
+    "notes": "T#bcbd9e97-90c2-44e0-9f7c-86b8657378ac R#TRX-123 Cek pdam palembang P001-PDAMKPL.413760800025 Pending Ket:Transaksi Sukses @03/06 14:34. Saldo 6.500"
   }
 }
 ```
 
-### Arti nilai di response check
-
-* `billAmount`: nominal tagihan utama
-* `adminFee`: admin fee dari provider
-* `totalAmount`: total final ke frontend, sudah termasuk markup internal
-* `detail.providerTotal`: total provider sebelum markup internal
-* `detail.markupAmount`: markup internal yang ditambahkan backend
-
-### Response saat inquiry masih menunggu callback provider
+### Response menunggu callback inquiry
 
 ```json
 {
   "success": true,
   "status": "PENDING",
-  "transactionId": "f4c1f1df-c0a2-4b2d-a2e0-9f9a0cfab123",
-  "message": "Menunggu data tagihan dari provider"
+  "transactionId": "bcbd9e97-90c2-44e0-9f7c-86b8657378ac",
+  "message": "Menunggu data tagihan dari provider",
+  "data": {
+    "billStatus": "PENDING",
+    "notes": "T#bcbd9e97-90c2-44e0-9f7c-86b8657378ac R#TRX-123 Cek pdam palembang P001-PDAMKPL.413760800025 Pending Ket:transaksi sedang di proses biller @03/06 14:34. Saldo 6.500"
+  }
 }
 ```
 
-### Response gagal: transaction tidak ditemukan
+### Response transaction tidak ditemukan
 
 ```json
 {
@@ -238,7 +276,7 @@ POST /api/trx/pascabayar/check
 }
 ```
 
-## 3. Payment API
+## 3. Payment
 
 ### Route
 
@@ -250,7 +288,7 @@ POST /api/trx/pascabayar/payment
 
 ```json
 {
-  "transactionId": "f4c1f1df-c0a2-4b2d-a2e0-9f9a0cfab123"
+  "transactionId": "bcbd9e97-90c2-44e0-9f7c-86b8657378ac"
 }
 ```
 
@@ -260,46 +298,58 @@ POST /api/trx/pascabayar/payment
 {
   "success": true,
   "status": "SUCCESS",
-  "transactionId": "f4c1f1df-c0a2-4b2d-a2e0-9f9a0cfab123",
-  "message": "Pembayaran berhasil"
+  "transactionId": "bcbd9e97-90c2-44e0-9f7c-86b8657378ac",
+  "message": "Pembayaran berhasil",
+  "data": {
+    "billStatus": "SUCCESS",
+    "customerName": "B*H*X*",
+    "billAmount": 78844,
+    "adminFee": 2500,
+    "totalAmount": 81344,
+    "tarif": "-",
+    "lembar_tagihan": 1,
+    "alamat": "-",
+    "detail": [
+      {
+        "periode": "062026",
+        "nilai_tagihan": "77180.0",
+        "admin": "2500",
+        "denda": "0.0",
+        "meter_awal": "0",
+        "meter_akhir": "0",
+        "biaya_lain": "0"
+      }
+    ],
+    "notes": "T#bcbd9e97-90c2-44e0-9f7c-86b8657378ac R#TRX-123 Cek pdam palembang P001-PDAMKPL.413760800025 Success Ket:Transaksi Sukses @03/06 14:34. Saldo 6.500"
+  }
 }
 ```
 
-### Response pending
+### Response payment masih diproses
 
 ```json
 {
   "success": true,
   "status": "PENDING",
-  "transactionId": "f4c1f1df-c0a2-4b2d-a2e0-9f9a0cfab123",
-  "message": "Pembayaran diproses"
-}
-```
-
-### Response gagal: inquiry belum siap
-
-```json
-{
-  "success": false,
-  "status": "PROVIDER_ERROR",
-  "message": "Inquiry belum lengkap atau data tagihan belum tersedia",
-  "error": {
-    "code": "INQUIRY_NOT_READY",
-    "message": "Inquiry belum lengkap atau data tagihan belum tersedia"
+  "transactionId": "bcbd9e97-90c2-44e0-9f7c-86b8657378ac",
+  "message": "Pembayaran diproses",
+  "data": {
+    "billStatus": "PENDING",
+    "notes": "T#..."
   }
 }
 ```
 
-### Response gagal: OKECONNECT masih menunggu callback inquiry
+### Response error provider
 
 ```json
 {
   "success": false,
   "status": "PROVIDER_ERROR",
-  "message": "Masih menunggu callback inquiry dari OKECONNECT",
+  "message": "Provider error",
   "error": {
-    "code": "INQUIRY_PENDING_CALLBACK",
-    "message": "Masih menunggu callback inquiry dari OKECONNECT"
+    "code": "PROVIDER_ERROR",
+    "message": "Provider error"
   }
 }
 ```
@@ -307,14 +357,6 @@ POST /api/trx/pascabayar/payment
 ## Product Validation Rules
 
 Lookup product dilakukan ke tabel `products` berdasarkan `sku`.
-
-Field yang dipakai:
-
-* `products.id`
-* `products.sku`
-* `products.vendor`
-* `products.vendorSku`
-* `products.type`
 
 Validasi yang dijalankan:
 
@@ -346,7 +388,7 @@ Minimal field yang disimpan:
 
 ## Markup Rules
 
-Markup dihitung oleh helper terpusat dan tidak boleh dihitung lagi di frontend.
+Markup dihitung oleh helper terpusat dan frontend tidak perlu menghitung ulang.
 
 ### FIXED
 
@@ -374,6 +416,7 @@ Kemungkinan nilai `status`:
 * `NOT_FOUND`
 * `INVALID_PRODUCT`
 * `PROVIDER_ERROR`
+* `DUPLICATE_REFERENCE_ID`
 
 ## Error Code yang Mungkin Muncul
 
@@ -392,32 +435,29 @@ Kemungkinan nilai `status`:
 * `OKECONNECT_PROVIDER_ERROR`
 * `H2H_PROVIDER_ERROR`
 
-## Sanitasi Raw Provider Response
+## Catatan Penting
 
-Jika response provider disimpan dan dikembalikan di field `raw` atau `error.detail`, field sensitif akan disamarkan:
-
-* `apikey`
-* `api_key`
-* `password`
-* `pin`
-* `sign`
-* `signature`
-* `token`
-
-Nilai akan menjadi:
-
-```json
-"[REDACTED]"
-```
+* `error` **tidak ditampilkan** untuk kasus `DUPLICATE_REFERENCE_ID`
+* frontend cukup membaca:
+  * `status`
+  * `transactionId`
+  * `message`
+  * `data.billStatus`
+  * `data.customerName`
+  * `data.billAmount`
+  * `data.adminFee`
+  * `data.totalAmount`
+  * `data.detail`
+  * `data.notes`
 
 ## Backward Compatibility
 
-Endpoint legacy lama masih ada:
+Endpoint legacy masih ada:
 
 * `/api/trx/postpaid/inquiry`
 * `/api/trx/postpaid/pay`
 
-Tetapi flow unified baru direkomendasikan memakai:
+Tetapi flow unified frontend direkomendasikan memakai:
 
 * `/api/trx/pascabayar/inquiry`
 * `/api/trx/pascabayar/check`

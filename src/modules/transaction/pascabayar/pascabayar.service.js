@@ -5,6 +5,7 @@ import { normalizePascabayarRequest, validatePascabayarProduct } from "./pascaba
 import pascabayarRepository, { parseMetadata } from "./pascabayar.repository.js";
 import { applyPricingToCheckData, calculatePascabayarPricing } from "./pascabayar.pricing.js";
 import { buildPascabayarNote } from "./pascabayar.notes.js";
+import { buildFrontendBillData } from "./pascabayar.mapper.js";
 
 const PROVIDERS = {
     DIGIFLAZZ: DigiflazzPascabayarProvider,
@@ -79,19 +80,20 @@ const normalizeCheckDataFromMetadata = (product, metadata) => {
 };
 
 const buildExistingInquiryResponse = async (transaction, product, metadata) => {
-    const data = metadata.billData ? normalizeCheckDataFromMetadata(product, metadata) : undefined;
+    const normalized = metadata.billData ? normalizeCheckDataFromMetadata(product, metadata) : undefined;
+    const data = normalized ? buildFrontendBillData({
+        status: transaction.status || "PENDING",
+        billData: normalized,
+        notes: transaction.notes
+    }) : undefined;
 
     return {
-        success: false,
+        success: true,
         status: "DUPLICATE_REFERENCE_ID",
         transactionId: transaction.id,
         inquiryId: metadata.providerInquiryId || metadata.providerRefId,
         message: "referenceId sudah digunakan, mengembalikan data transaksi yang sudah ada",
-        data,
-        error: {
-            code: "REFERENCE_ID_NOT_UNIQUE",
-            message: "referenceId sudah digunakan"
-        }
+        data
     };
 };
 
@@ -191,7 +193,18 @@ const PascabayarTransactionService = {
                 status: "PENDING",
                 transactionId: transaction.id,
                 inquiryId: request.referenceId,
-                message: "Inquiry berhasil, menunggu callback provider"
+                message: "Inquiry berhasil, menunggu callback provider",
+                data: buildFrontendBillData({
+                    status: "PENDING",
+                    billData: {},
+                    notes: buildPascabayarNote({
+                        transaction: { ...transaction, vendorTrxId },
+                        product,
+                        status: "PENDING",
+                        message: providerResponse.message || "transaksi sedang di proses biller",
+                        balance: currentBalance
+                    })
+                })
             };
         }
 
@@ -250,7 +263,21 @@ const PascabayarTransactionService = {
             status: "PENDING",
             transactionId: transaction.id,
             inquiryId: metadata.providerInquiryId || metadata.providerRefId,
-            message: "Inquiry berhasil"
+            message: "Inquiry berhasil",
+            data: buildFrontendBillData({
+                status: "PENDING",
+                billData: normalizeCheckDataFromMetadata(product, metadata),
+                notes: buildPascabayarNote({
+                    transaction: {
+                        ...transaction,
+                        vendorTrxId: metadata.providerInquiryId || metadata.providerTransactionId || metadata.providerRefId
+                    },
+                    product,
+                    status: "PENDING",
+                    message: providerResponse.message || "transaksi sedang di proses biller",
+                    balance: currentBalance
+                })
+            })
         };
     },
 
@@ -269,15 +296,26 @@ const PascabayarTransactionService = {
                     success: true,
                     status: "PENDING",
                     transactionId: transaction.id,
-                    message: "Menunggu data tagihan dari provider"
+                    message: "Menunggu data tagihan dari provider",
+                    data: buildFrontendBillData({
+                        status: "PENDING",
+                        billData: {},
+                        notes: transaction.notes
+                    })
                 };
             }
+
+            const normalized = normalizeCheckDataFromMetadata(product, metadata);
 
             return {
                 success: true,
                 status: transaction.status || "PENDING",
                 transactionId: transaction.id,
-                data: normalizeCheckDataFromMetadata(product, metadata)
+                data: buildFrontendBillData({
+                    status: transaction.status || "PENDING",
+                    billData: normalized,
+                    notes: transaction.notes
+                })
             };
         }
 
@@ -312,7 +350,11 @@ const PascabayarTransactionService = {
             success: providerResponse.success,
             status: providerResponse.status,
             transactionId: transaction.id,
-            data: responseData,
+            data: buildFrontendBillData({
+                status: providerResponse.status,
+                billData: responseData || {},
+                notes: providerResponse.message || transaction.notes
+            }),
             message: providerResponse.message
         };
     },
@@ -373,7 +415,12 @@ const PascabayarTransactionService = {
             success: providerResponse.success,
             status: providerResponse.status,
             transactionId: transaction.id,
-            message: providerResponse.status === "SUCCESS" ? "Pembayaran berhasil" : providerResponse.message || "Pembayaran diproses"
+            message: providerResponse.status === "SUCCESS" ? "Pembayaran berhasil" : providerResponse.message || "Pembayaran diproses",
+            data: buildFrontendBillData({
+                status: providerResponse.status,
+                billData: responseData || {},
+                notes: providerResponse.message || transaction.notes
+            })
         };
     }
 };

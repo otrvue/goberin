@@ -157,3 +157,22 @@ export const createProviderDetail = (detail) => {
 
     return sanitizeRaw(detail);
 };
+
+export const buildFrontendBillData = ({ status, billData = {}, notes }) => {
+    const normalizedDetail = billData.detail && typeof billData.detail === "object" && !Array.isArray(billData.detail)
+        ? billData.detail
+        : {};
+
+    return {
+        billStatus: status,
+        customerName: billData.customerName,
+        billAmount: billData.billAmount,
+        adminFee: billData.adminFee,
+        totalAmount: billData.totalAmount,
+        tarif: normalizedDetail.tarif,
+        lembar_tagihan: normalizedDetail.lembar_tagihan,
+        alamat: normalizedDetail.alamat,
+        detail: normalizedDetail.detail || billData.detail,
+        notes
+    };
+};
