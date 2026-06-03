@@ -1,0 +1,7 @@
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-26T05:34:42.293Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-26T05:34:42.297Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-26T05:37:37.198Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-26T05:37:37.204Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-26T05:39:57.841Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-26T05:39:57.845Z"}
+{"level":"error","message":"Background Transaction Error (bg-test-id-1779781850130):","timestamp":"2026-05-26T07:50:51.131Z"}

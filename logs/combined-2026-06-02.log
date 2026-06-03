@@ -1,0 +1,540 @@
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T01:14:23.445Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T01:14:23.598Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T01:14:23.974Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T01:14:23.975Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T01:14:23.979Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T01:14:23.980Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/logout \u001b[32m200\u001b[0m 3.189 ms - 44\u001b[0m","timestamp":"2026-06-02T01:23:40.129Z"}
+{"level":"warn","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-06-02T01:23:46.079Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 9.301 ms - 95\u001b[0m","timestamp":"2026-06-02T01:23:46.080Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 105.769 ms - 379\u001b[0m","timestamp":"2026-06-02T01:23:53.185Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login/verify \u001b[32m200\u001b[0m 3.811 ms - 1080\u001b[0m","timestamp":"2026-06-02T01:24:09.786Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T01:24:10.331Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T01:24:10.331Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-02T01:24:10.390Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 349.426 ms - 571\u001b[0m","timestamp":"2026-06-02T01:24:10.500Z"}
+{"level":"error","message":"Vendor Test Connection Failed (DIGIFLAZZ): Signature Anda salah","timestamp":"2026-06-02T01:29:48.143Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/vendor-configs/DIGIFLAZZ/test \u001b[33m400\u001b[0m 218.316 ms - 50\u001b[0m","timestamp":"2026-06-02T01:29:48.144Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T01:29:52.379Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/vendor-configs/OKECONNECT/test \u001b[33m400\u001b[0m 186.917 ms - 76\u001b[0m","timestamp":"2026-06-02T01:29:52.380Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/vendor-configs/H2H/test \u001b[33m400\u001b[0m 1.360 ms - 49\u001b[0m","timestamp":"2026-06-02T01:29:55.627Z"}
+{"level":"info","message":"\u001b[0mGET /favicon.ico \u001b[33m404\u001b[0m 0.407 ms - 210\u001b[0m","timestamp":"2026-06-02T01:32:28.741Z"}
+{"level":"info","message":"\u001b[0mPUT /api/admin/vendor-configs/H2H \u001b[33m400\u001b[0m 1.779 ms - 49\u001b[0m","timestamp":"2026-06-02T01:33:09.124Z"}
+{"level":"info","message":"\u001b[0mPUT /api/admin/vendor-configs/H2H \u001b[33m400\u001b[0m 1.573 ms - 49\u001b[0m","timestamp":"2026-06-02T01:33:21.385Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T01:33:58.177Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T01:33:58.185Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T01:33:59.242Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T01:33:59.243Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T01:33:59.247Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T01:33:59.247Z"}
+{"level":"error","message":"500 - Data truncated for column 'vendor' at row 1 - /api/admin/vendor-configs/H2H - PUT - ::1","timestamp":"2026-06-02T01:34:03.736Z"}
+{"level":"error","message":"Error: Data truncated for column 'vendor' at row 1\n    at Object.upsertConfig (file:///home/cavathaeon/OTRVUE/NEOPAY/src/modules/admin/vendorConfig.repository.js:33:27)\n    at Object.updateConfig (file:///home/cavathaeon/OTRVUE/NEOPAY/src/modules/admin/vendorConfig.service.js:37:45)\n    at updateConfig (file:///home/cavathaeon/OTRVUE/NEOPAY/src/modules/admin/vendorConfig/controller.js:35:39)\n    at Layer.handle [as handle_request] (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/layer.js:95:5)\n    at /home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/index.js:284:15\n    at param (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/index.js:365:14)\n    at param (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/index.js:376:14)","timestamp":"2026-06-02T01:34:03.737Z"}
+{"level":"info","message":"\u001b[0mPUT /api/admin/vendor-configs/H2H \u001b[31m500\u001b[0m 12.111 ms - 91\u001b[0m","timestamp":"2026-06-02T01:34:03.742Z"}
+{"level":"info","message":"\u001b[0mPUT /api/admin/vendor-configs/H2H \u001b[32m200\u001b[0m 137.560 ms - 71\u001b[0m","timestamp":"2026-06-02T01:39:59.734Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/vendor-configs/H2H/test \u001b[33m400\u001b[0m 1.928 ms - 49\u001b[0m","timestamp":"2026-06-02T01:40:06.261Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/vendor-configs/H2H/test \u001b[33m400\u001b[0m 1.697 ms - 49\u001b[0m","timestamp":"2026-06-02T01:40:17.447Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T01:40:38.627Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T01:40:38.635Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T01:40:40.071Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T01:40:40.072Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T01:40:40.076Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T01:40:40.077Z"}
+{"level":"error","message":"H2H.id Balance Error: PIN salah. Sisa percobaan: 4x","timestamp":"2026-06-02T01:40:43.090Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/vendor-configs/H2H/test \u001b[33m400\u001b[0m 855.364 ms - 73\u001b[0m","timestamp":"2026-06-02T01:40:43.093Z"}
+{"level":"info","message":"\u001b[0mPUT /api/admin/vendor-configs/H2H \u001b[32m200\u001b[0m 272.746 ms - 71\u001b[0m","timestamp":"2026-06-02T01:41:07.943Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/vendor-configs/H2H/test \u001b[32m200\u001b[0m 1478.787 ms - 60\u001b[0m","timestamp":"2026-06-02T01:41:10.891Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T01:42:49.714Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T01:42:49.722Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T01:42:51.403Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T01:42:51.403Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T01:42:51.406Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T01:42:51.406Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T01:44:08.278Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T01:44:08.285Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T01:44:10.569Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T01:44:10.570Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T01:44:10.573Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T01:44:10.574Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T01:48:51.365Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T01:48:51.373Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T01:48:53.057Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T01:48:53.064Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T01:48:54.077Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T01:48:54.078Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T01:48:54.080Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T01:48:54.081Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/products/sync/h2h \u001b[32m200\u001b[0m 3.407 ms - 59\u001b[0m","timestamp":"2026-06-02T01:55:27.217Z"}
+{"level":"error","message":"H2H.id Sync Error:","timestamp":"2026-06-02T01:55:30.765Z"}
+{"level":"error","message":"Background H2h Sync Error: Cannot read properties of undefined (reading 'replace')","stack":"TypeError: Cannot read properties of undefined (reading 'replace')\n    at generateSkuFromName (file:///home/cavathaeon/OTRVUE/NEOPAY/src/modules/admin/sync/h2h.service.js:58:28)\n    at Object.syncProducts (file:///home/cavathaeon/OTRVUE/NEOPAY/src/modules/admin/sync/h2h.service.js:146:35)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)","timestamp":"2026-06-02T01:55:30.766Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T01:56:17.056Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T01:56:17.062Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T01:56:17.820Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T01:56:17.821Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T01:56:17.824Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T01:56:17.824Z"}
+{"level":"info","message":"\u001b[0mPUT /api/admin/vendor-configs/H2H \u001b[32m200\u001b[0m 148.876 ms - 71\u001b[0m","timestamp":"2026-06-02T02:00:32.020Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/vendor-configs/test/H2H \u001b[33m404\u001b[0m 2.190 ms - 233\u001b[0m","timestamp":"2026-06-02T02:00:33.347Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/vendor-configs/test/H2H \u001b[33m404\u001b[0m 2.344 ms - 233\u001b[0m","timestamp":"2026-06-02T02:00:41.526Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/vendor-configs/test/OKECONNECT \u001b[33m404\u001b[0m 1.801 ms - 240\u001b[0m","timestamp":"2026-06-02T02:00:48.666Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T02:01:38.687Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T02:01:38.694Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T02:01:40.191Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T02:01:40.193Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T02:01:40.196Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T02:01:40.197Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/vendor-configs/H2H/test \u001b[32m200\u001b[0m 721.561 ms - 60\u001b[0m","timestamp":"2026-06-02T02:03:15.396Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/products/sync/h2h \u001b[32m200\u001b[0m 4.099 ms - 59\u001b[0m","timestamp":"2026-06-02T02:03:23.030Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T02:07:05.622Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T02:07:05.629Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T02:07:06.780Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T02:07:06.781Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T02:07:06.783Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T02:07:06.783Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T02:09:42.378Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T02:09:42.389Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T02:09:44.161Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T02:09:44.162Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T02:09:44.166Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T02:09:44.166Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T02:09:59.559Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T02:09:59.566Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T02:10:01.060Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T02:10:01.061Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T02:10:01.063Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T02:10:01.063Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/products/sync/h2h \u001b[32m200\u001b[0m 8.427 ms - 59\u001b[0m","timestamp":"2026-06-02T02:10:25.480Z"}
+{"errorCode":"SYNC_ALREADY_RUNNING","level":"error","message":"Background H2h Sync Error: Proses sinkronisasi H2H.id sedang berjalan","status":400,"timestamp":"2026-06-02T02:10:25.482Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T02:12:25.380Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T02:12:25.389Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T02:12:27.292Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T02:12:27.293Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T02:12:27.295Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T02:12:27.296Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/products/sync/h2h \u001b[32m200\u001b[0m 2.928 ms - 59\u001b[0m","timestamp":"2026-06-02T02:12:58.083Z"}
+{"errorCode":"SYNC_ALREADY_RUNNING","level":"error","message":"Background H2h Sync Error: Proses sinkronisasi H2H.id sedang berjalan","status":400,"timestamp":"2026-06-02T02:12:58.087Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T02:14:04.779Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T02:14:04.788Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T02:14:05.539Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T02:14:05.541Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T02:14:05.543Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T02:14:05.544Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/products/sync/h2h \u001b[32m200\u001b[0m 9.694 ms - 59\u001b[0m","timestamp":"2026-06-02T02:14:40.050Z"}
+{"level":"warn","message":"Stuck H2H sync task (744cef9e-c094-4ba7-826a-aa3418529ea2) has been cleaned up.","timestamp":"2026-06-02T02:14:40.205Z"}
+{"level":"error","message":"H2H.id Sync Error:","timestamp":"2026-06-02T02:14:43.049Z"}
+{"code":"ER_BAD_NULL_ERROR","errno":1048,"level":"error","message":"Background H2h Sync Error: Column 'sku' cannot be null","sql":"UPDATE products SET sku = NULL, vendorSku = 'ADSS1', vendor = 'H2H', type = 'PREPAID', name = 'Axis Data Boostr Sunset 500 MB 1 Hari', description = 'Axis Data Boostr Sunset 500 MB 1 Hari', basePrice = 765, isActive = true, categoryId = '91f681b9-76e1-41ca-91cb-2096435c66af', providerId = 'e1b3cfa8-6b12-402a-816e-3af83b6ef604', updatedAt = NOW() WHERE id = 'c7f0ec73-1b00-4595-b044-d21cf781b810'","sqlMessage":"Column 'sku' cannot be null","sqlState":"23000","stack":"Error: Column 'sku' cannot be null\n    at Object.updateProduct (file:///home/cavathaeon/OTRVUE/NEOPAY/src/modules/admin/sync/repository.js:89:27)\n    at file:///home/cavathaeon/OTRVUE/NEOPAY/src/modules/admin/sync/h2h.service.js:231:75\n    at Array.map (<anonymous>)\n    at Object.syncProducts (file:///home/cavathaeon/OTRVUE/NEOPAY/src/modules/admin/sync/h2h.service.js:231:48)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)","timestamp":"2026-06-02T02:14:43.051Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T02:15:11.648Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T02:15:11.657Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T02:15:12.440Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T02:15:12.441Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T02:15:12.443Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T02:15:12.444Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/products/sync/h2h \u001b[32m200\u001b[0m 10.382 ms - 59\u001b[0m","timestamp":"2026-06-02T02:15:40.301Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/products/sync/h2h \u001b[32m200\u001b[0m 1.624 ms - 59\u001b[0m","timestamp":"2026-06-02T02:21:01.616Z"}
+{"errorCode":"SYNC_ALREADY_RUNNING","level":"error","message":"Background H2h Sync Error: Proses sinkronisasi H2H.id sedang berjalan","status":400,"timestamp":"2026-06-02T02:21:01.618Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/products/sync/h2h \u001b[32m200\u001b[0m 1.632 ms - 59\u001b[0m","timestamp":"2026-06-02T02:51:39.879Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/products/sync/h2h \u001b[32m200\u001b[0m 1.554 ms - 59\u001b[0m","timestamp":"2026-06-02T02:51:51.376Z"}
+{"errorCode":"SYNC_ALREADY_RUNNING","level":"error","message":"Background H2h Sync Error: Proses sinkronisasi H2H.id sedang berjalan","status":400,"timestamp":"2026-06-02T02:51:51.377Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T02:53:53.215Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T02:53:53.223Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T02:53:55.100Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T02:53:55.101Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T02:53:55.104Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T02:53:55.104Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T02:57:51.091Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T02:57:51.098Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T02:57:53.167Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T02:57:53.168Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T02:57:53.185Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T02:57:53.189Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T03:00:15.929Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T03:00:15.937Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T03:00:16.804Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T03:00:16.806Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T03:00:16.809Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T03:00:16.810Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/products/sync/h2h \u001b[32m200\u001b[0m 9.089 ms - 59\u001b[0m","timestamp":"2026-06-02T03:02:07.403Z"}
+{"level":"warn","message":"Stuck H2H sync task (1a2dcd86-36e3-487c-a994-5f3d6558f746) has been cleaned up.","timestamp":"2026-06-02T03:02:07.585Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T03:15:28.679Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T03:15:28.688Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T03:15:29.539Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T03:15:29.541Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T03:15:29.547Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T03:15:29.548Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T03:15:35.924Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T03:15:35.935Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T03:15:37.682Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T03:15:37.683Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T03:15:37.685Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T03:15:37.686Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T03:15:45.456Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T03:15:45.464Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T03:15:46.222Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T03:15:46.223Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T03:15:46.228Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T03:15:46.228Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T03:15:56.259Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T03:15:56.266Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T03:15:57.629Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T03:15:57.629Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T03:15:57.632Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T03:15:57.632Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T03:16:27.463Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T03:16:27.474Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T03:16:28.516Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T03:16:28.519Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T03:16:28.528Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T03:16:28.528Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/logout \u001b[32m200\u001b[0m 2.034 ms - 44\u001b[0m","timestamp":"2026-06-02T04:08:25.384Z"}
+{"level":"info","message":"Email sent: <77146dbe-98d1-53b0-b2e7-f0fdfc16b313@cocogo.store>","timestamp":"2026-06-02T04:08:39.037Z"}
+{"level":"warn","message":"403 - Email Anda belum diverifikasi. Kami telah mengirimkan ulang email verifikasi ke alamat email Anda. Silakan cek inbox atau folder spam. - /api/auth/login - POST - ::1","timestamp":"2026-06-02T04:08:39.039Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m403\u001b[0m 8515.724 ms - 209\u001b[0m","timestamp":"2026-06-02T04:08:39.041Z"}
+{"level":"warn","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-06-02T04:09:12.315Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 97.463 ms - 95\u001b[0m","timestamp":"2026-06-02T04:09:12.316Z"}
+{"level":"info","message":"Email sent: <37dd1b56-3ecd-09fa-1e06-4da2b6c342fa@cocogo.store>","timestamp":"2026-06-02T04:09:38.267Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 9178.664 ms - 384\u001b[0m","timestamp":"2026-06-02T04:09:38.268Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login/verify \u001b[32m200\u001b[0m 133.471 ms - 1036\u001b[0m","timestamp":"2026-06-02T04:09:56.458Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/logout \u001b[32m200\u001b[0m 1.276 ms - 44\u001b[0m","timestamp":"2026-06-02T04:10:52.782Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 96.101 ms - 379\u001b[0m","timestamp":"2026-06-02T04:10:56.267Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login/verify \u001b[32m200\u001b[0m 2.991 ms - 1080\u001b[0m","timestamp":"2026-06-02T04:11:15.198Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T04:11:15.677Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T04:11:15.677Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-02T04:11:19.494Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 4088.835 ms - 571\u001b[0m","timestamp":"2026-06-02T04:11:19.496Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T04:11:28.467Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T04:11:28.468Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-02T04:11:28.499Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 313.610 ms - 571\u001b[0m","timestamp":"2026-06-02T04:11:28.502Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T04:11:42.044Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T04:11:42.045Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-02T04:11:42.402Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 635.963 ms - 571\u001b[0m","timestamp":"2026-06-02T04:11:42.406Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-02T04:16:29.309Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T04:16:29.395Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T04:16:29.395Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 258.863 ms - 571\u001b[0m","timestamp":"2026-06-02T04:16:29.396Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T04:32:56.223Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T04:32:56.230Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T04:32:57.526Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T04:32:57.527Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T04:32:57.529Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T04:32:57.530Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T04:32:58.523Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T04:32:58.531Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T04:32:59.238Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T04:32:59.239Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T04:32:59.243Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T04:32:59.243Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T04:33:00.242Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T04:33:00.250Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T04:33:01.217Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T04:33:01.219Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T04:33:01.222Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T04:33:01.222Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T04:59:42.869Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T04:59:42.876Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T04:59:44.770Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T04:59:44.771Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T04:59:44.773Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T04:59:44.773Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T04:59:59.696Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T04:59:59.706Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T05:00:01.647Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T05:00:01.655Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T05:00:02.805Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T05:00:02.806Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T05:00:02.813Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T05:00:02.816Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T05:00:03.917Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T05:00:03.924Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T05:00:05.406Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T05:00:05.407Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T05:00:05.411Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T05:00:05.411Z"}
+{"level":"info","message":"\u001b[0mGET /favicon.ico \u001b[33m404\u001b[0m 0.409 ms - 210\u001b[0m","timestamp":"2026-06-02T05:05:06.842Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T05:31:11.572Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T05:31:11.579Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T05:31:12.725Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T05:31:12.726Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T05:31:12.729Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T05:31:12.729Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T05:31:26.622Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T05:31:26.629Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T05:31:27.733Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T05:31:27.734Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T05:31:27.739Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T05:31:27.739Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T05:33:22.930Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T05:33:22.938Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T05:33:24.629Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T05:33:24.630Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T05:33:24.632Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T05:33:24.632Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T05:33:40.575Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T05:33:40.583Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T05:33:41.760Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T05:33:41.761Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T05:33:41.763Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T05:33:41.763Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T05:36:30.717Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T05:36:30.724Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T05:36:31.937Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T05:36:31.940Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T05:36:31.946Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T05:36:31.946Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T05:39:41.655Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T05:39:41.657Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-02T05:39:41.848Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 718.093 ms - 571\u001b[0m","timestamp":"2026-06-02T05:39:41.852Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T05:41:37.912Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T05:48:57.116Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T05:48:57.123Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T05:48:57.994Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T05:48:57.995Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T05:48:57.998Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T05:48:57.999Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T06:04:59.468Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T06:04:59.470Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-02T06:04:59.781Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 732.822 ms - 571\u001b[0m","timestamp":"2026-06-02T06:04:59.791Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T06:14:53.878Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T06:23:00.479Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T06:23:00.789Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T06:23:01.561Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T06:23:01.562Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T06:23:01.566Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T06:23:01.567Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T06:23:39.534Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T06:23:39.535Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-02T06:23:39.980Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 848.505 ms - 571\u001b[0m","timestamp":"2026-06-02T06:23:40.014Z"}
+{"level":"info","message":"Database pool closed","timestamp":"2026-06-02T07:00:28.563Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:07:30.534Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:07:30.778Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:07:32.020Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:07:32.021Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:07:32.024Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:07:32.025Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:13:42.630Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:13:42.640Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:13:43.783Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:13:43.785Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:13:43.789Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:13:43.789Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T08:14:43.426Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T08:14:43.427Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-02T08:14:44.475Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 1615.078 ms - 571\u001b[0m","timestamp":"2026-06-02T08:14:44.510Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:16:17.142Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:16:17.152Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:16:18.172Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:16:18.173Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:16:18.178Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:16:18.178Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T08:17:02.882Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T08:17:02.883Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-02T08:17:03.178Z"}
+{"level":"error","message":"Sync Vendor Balances Error:","timestamp":"2026-06-02T08:17:03.800Z"}
+{"level":"error","message":"500 - Data truncated for column 'vendor' at row 1 - /api/admin/balances/vendors/sync - POST - ::1","timestamp":"2026-06-02T08:17:03.802Z"}
+{"level":"error","message":"Error: Data truncated for column 'vendor' at row 1\n    at Object.updateVendorBalance (file:///home/cavathaeon/OTRVUE/NEOPAY/src/modules/transaction/repository.js:359:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async Promise.all (index 0)\n    at async Object.syncVendorBalances (file:///home/cavathaeon/OTRVUE/NEOPAY/src/modules/admin/balance/service.js:64:13)\n    at async syncVendorBalances (file:///home/cavathaeon/OTRVUE/NEOPAY/src/modules/admin/balance/controller.js:16:28)","timestamp":"2026-06-02T08:17:03.802Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[31m500\u001b[0m 1289.601 ms - 91\u001b[0m","timestamp":"2026-06-02T08:17:03.803Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:18:22.287Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:18:22.294Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:18:23.223Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:18:23.224Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:18:23.228Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:18:23.228Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T08:18:42.487Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T08:18:42.488Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-02T08:18:42.594Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 1985.758 ms - 733\u001b[0m","timestamp":"2026-06-02T08:18:44.046Z"}
+{"level":"warn","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-06-02T08:20:36.448Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 112.442 ms - 95\u001b[0m","timestamp":"2026-06-02T08:20:36.449Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 101.377 ms - 379\u001b[0m","timestamp":"2026-06-02T08:20:54.341Z"}
+{"level":"info","message":"Email sent: <9895034f-ffeb-9639-d689-66e6b59b4856@cocogo.store>","timestamp":"2026-06-02T08:23:06.870Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/2fa/otp/send \u001b[32m200\u001b[0m 16336.594 ms - 65\u001b[0m","timestamp":"2026-06-02T08:23:06.871Z"}
+{"level":"info","message":"\u001b[0mPUT /api/users/regenerate-api-key \u001b[32m200\u001b[0m 234.395 ms - 132\u001b[0m","timestamp":"2026-06-02T08:23:30.966Z"}
+{"level":"warn","message":"400 - Saldo tidak cukup - /api/trx/prepaid - POST - ::1","timestamp":"2026-06-02T08:26:44.197Z"}
+{"level":"info","message":"\u001b[0mPOST /api/trx/prepaid \u001b[33m400\u001b[0m 28.013 ms - 94\u001b[0m","timestamp":"2026-06-02T08:26:44.198Z"}
+{"level":"info","message":"Email sent: <f8d2925a-eac5-305c-7e80-2bea6bed32f6@cocogo.store>","timestamp":"2026-06-02T08:29:15.454Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/2fa/otp/send \u001b[32m200\u001b[0m 8585.911 ms - 65\u001b[0m","timestamp":"2026-06-02T08:29:15.455Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/users/0d595fde-6392-4d0e-97b1-670ec81e2e5a/balance \u001b[32m200\u001b[0m 531.243 ms - 136\u001b[0m","timestamp":"2026-06-02T08:29:40.185Z"}
+{"level":"info","message":"Background Transaction Started (f3863051-941d-4482-8648-e9dad4afc089)","timestamp":"2026-06-02T08:29:54.371Z"}
+{"level":"info","message":"\u001b[0mPOST /api/trx/prepaid \u001b[32m200\u001b[0m 189.801 ms - 409\u001b[0m","timestamp":"2026-06-02T08:29:54.372Z"}
+{"level":"info","message":"Background Transaction Success (f3863051-941d-4482-8648-e9dad4afc089)","timestamp":"2026-06-02T08:29:55.598Z"}
+{"level":"info","message":"\u001b[0mGET /favicon.ico \u001b[33m404\u001b[0m 0.302 ms - 210\u001b[0m","timestamp":"2026-06-02T08:32:05.867Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:34:30.109Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:34:30.118Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:34:31.408Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:34:31.409Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:34:31.411Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:34:31.412Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:34:38.382Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:34:38.390Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:34:39.334Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:34:39.335Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:34:39.337Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:34:39.337Z"}
+{"level":"info","message":"\u001b[0mPOST /api/callback/h2h \u001b[33m404\u001b[0m 2.967 ms - 216\u001b[0m","timestamp":"2026-06-02T08:35:45.780Z"}
+{"level":"info","message":"Received H2H Callback:","timestamp":"2026-06-02T08:36:01.340Z"}
+{"level":"info","message":"Triggering outbound callback for H2H transaction f3863051-941d-4482-8648-e9dad4afc089","timestamp":"2026-06-02T08:36:01.482Z"}
+{"level":"info","message":"\u001b[0mPOST /api/callbacks/h2h \u001b[32m200\u001b[0m 146.002 ms - 2\u001b[0m","timestamp":"2026-06-02T08:36:01.486Z"}
+{"level":"info","message":"Background Transaction Started (f524b124-882c-4c3d-ac5c-927e6e6e3374)","timestamp":"2026-06-02T08:37:11.262Z"}
+{"level":"info","message":"\u001b[0mPOST /api/trx/prepaid \u001b[32m200\u001b[0m 175.605 ms - 409\u001b[0m","timestamp":"2026-06-02T08:37:11.264Z"}
+{"level":"info","message":"Background Transaction Success (f524b124-882c-4c3d-ac5c-927e6e6e3374)","timestamp":"2026-06-02T08:37:12.318Z"}
+{"level":"info","message":"Received H2H Callback:","timestamp":"2026-06-02T08:37:17.222Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:38:57.446Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:38:57.453Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:38:58.280Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:38:58.281Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:38:58.283Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:38:58.284Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:40:23.906Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:40:23.912Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:40:25.051Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:40:25.052Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:40:25.055Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:40:25.055Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:41:08.077Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:41:08.084Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:41:09.296Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:41:09.297Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:41:09.299Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:41:09.300Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:41:45.532Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:41:45.543Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:41:47.155Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:41:47.156Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:41:47.159Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:41:47.159Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:41:51.913Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:41:51.921Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:41:52.827Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:41:52.828Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:41:52.831Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:41:52.832Z"}
+{"level":"info","message":"Background Transaction Started (7f0d9310-b3ec-4fa3-ab58-bb99a0531d65)","timestamp":"2026-06-02T08:42:29.253Z"}
+{"level":"info","message":"\u001b[0mPOST /api/trx/prepaid \u001b[32m200\u001b[0m 207.874 ms - 409\u001b[0m","timestamp":"2026-06-02T08:42:29.257Z"}
+{"level":"info","message":"Background Transaction Success (7f0d9310-b3ec-4fa3-ab58-bb99a0531d65)","timestamp":"2026-06-02T08:42:33.268Z"}
+{"level":"info","message":"Received H2H Callback Raw: {\"refid\":\"7f0d9310-b3ec-4fa3-ab58-bb99a0531d65\",\"message\":\"T#INV2026060238B68B11 R#7f0d9310-b3ec-4fa3-ab58-bb99a0531d65 Dana 1.000 D1.085194550304 SUKSES. SN/Ref: DNID ACHXXX RAMXXXXX/1000/2026060210121481030100166575527717814. Saldo 6.400 @02/06 15:42\"}","timestamp":"2026-06-02T08:42:37.231Z"}
+{"level":"info","message":"Triggering outbound callback for H2H transaction 7f0d9310-b3ec-4fa3-ab58-bb99a0531d65","timestamp":"2026-06-02T08:42:37.237Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:43:50.263Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:43:50.271Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:43:51.725Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:43:51.726Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:43:51.730Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:43:51.730Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:43:57.560Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:43:57.569Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:43:58.557Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:43:58.558Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:43:58.561Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:43:58.562Z"}
+{"level":"info","message":"Received H2H Callback Raw: {\"refid\":\"7f0d9310-b3ec-4fa3-ab58-bb99a0531d65\",\"message\":\"T#INV2026060238B68B11 R#7f0d9310-b3ec-4fa3-ab58-bb99a0531d65 Dana 1.000 D1.085194550304 SUKSES. SN/Ref: DNID ACHXXX RAMXXXXX/1000/2026060210121481030100166575527717814. Saldo 6.400 @02/06 15:42\"}","timestamp":"2026-06-02T08:44:12.314Z"}
+{"level":"info","message":"Triggering outbound callback for H2H transaction 7f0d9310-b3ec-4fa3-ab58-bb99a0531d65","timestamp":"2026-06-02T08:44:12.513Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:44:58.292Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:44:58.300Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:44:59.536Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:44:59.538Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:44:59.541Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:44:59.542Z"}
+{"level":"info","message":"Received H2H Callback Raw: {\"refid\":\"7f0d9310-b3ec-4fa3-ab58-bb99a0531d65\",\"message\":\"T#INV2026060238B68B11 R#7f0d9310-b3ec-4fa3-ab58-bb99a0531d65 Dana 1.000 D1.085194550304 SUKSES. SN/Ref: DNID ACHXXX RAMXXXXX/1000/2026060210121481030100166575527717814. Saldo 6.400 @02/06 15:42\"}","timestamp":"2026-06-02T08:45:20.705Z"}
+{"level":"info","message":"Received H2H Callback Raw: {\"refid\":\"7f0d9310-b3ec-4fa3-ab58-bb99a0531d65\",\"message\":\"T#INV2026060238B68B11 R#7f0d9310-b3ec-4fa3-ab58-bb99a0531d65 Dana 1.000 D1.085194550304 SUKSES. SN/Ref: DNID ACHXXX RAMXXXXX/1000/2026060210121481030100166575527717814. Saldo 6.400 @02/06 15:42\"}","timestamp":"2026-06-02T08:45:57.785Z"}
+{"level":"info","message":"Triggering outbound callback for H2H transaction 7f0d9310-b3ec-4fa3-ab58-bb99a0531d65","timestamp":"2026-06-02T08:45:58.019Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:47:04.917Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:47:04.924Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:47:05.869Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:47:05.870Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:47:05.874Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:47:05.874Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:47:17.194Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:47:17.201Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:47:17.767Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:47:17.767Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:47:17.770Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:47:17.771Z"}
+{"level":"info","message":"Background Transaction Started (9a9ea75a-ce73-4a74-8f60-d31063059ac7)","timestamp":"2026-06-02T08:48:00.984Z"}
+{"level":"info","message":"\u001b[0mPOST /api/trx/prepaid \u001b[32m200\u001b[0m 475.984 ms - 409\u001b[0m","timestamp":"2026-06-02T08:48:00.992Z"}
+{"level":"info","message":"Background Transaction Success (9a9ea75a-ce73-4a74-8f60-d31063059ac7)","timestamp":"2026-06-02T08:48:02.262Z"}
+{"level":"info","message":"Received H2H Callback Raw: {\"refid\":\"9a9ea75a-ce73-4a74-8f60-d31063059ac7\",\"message\":\"T#INV20260602D5D09D94 R#9a9ea75a-ce73-4a74-8f60-d31063059ac7 Dana 1.000 D1.085194550304 SUKSES. SN/Ref: DNID ACHXXX RAMXXXXX/1000/2026060210121481030100166575527841730. Saldo 5.200 @02/06 15:48\"}","timestamp":"2026-06-02T08:48:09.815Z"}
+{"level":"info","message":"Triggering outbound callback for H2H transaction 9a9ea75a-ce73-4a74-8f60-d31063059ac7","timestamp":"2026-06-02T08:48:09.960Z"}
+{"level":"info","message":"Background Transaction Started (c2922cf5-229f-4d24-86ae-40fefb577d00)","timestamp":"2026-06-02T08:51:43.961Z"}
+{"level":"info","message":"\u001b[0mPOST /api/trx/prepaid \u001b[32m200\u001b[0m 186.162 ms - 409\u001b[0m","timestamp":"2026-06-02T08:51:43.963Z"}
+{"level":"error","message":"H2H.id Order Error: Produk tagihan wajib dicek lebih dulu via /trx/inquiry. Sertakan parameter inquiry_id pada order.","timestamp":"2026-06-02T08:51:45.255Z"}
+{"level":"error","message":"Background Transaction Error (c2922cf5-229f-4d24-86ae-40fefb577d00): Produk tagihan wajib dicek lebih dulu via /trx/inquiry. Sertakan parameter inquiry_id pada order.","stack":"Error: Produk tagihan wajib dicek lebih dulu via /trx/inquiry. Sertakan parameter inquiry_id pada order.\n    at Object.processTransaction (file:///home/cavathaeon/OTRVUE/NEOPAY/src/integrations/h2h/index.js:85:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///home/cavathaeon/OTRVUE/NEOPAY/src/modules/transaction/service.js:138:34","timestamp":"2026-06-02T08:51:45.256Z"}
+{"level":"error","message":"Telegram Notif Error: Cannot read properties of null (reading 'isTelegramActive')","timestamp":"2026-06-02T08:51:45.350Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:55:56.050Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:55:56.060Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:55:57.331Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:55:57.331Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:55:57.333Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:55:57.334Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T08:56:03.098Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T08:56:03.106Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T08:56:04.430Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T08:56:04.431Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T08:56:04.434Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T08:56:04.435Z"}
+{"level":"info","message":"\u001b[0mPOST /api/trx/prepaid \u001b[33m401\u001b[0m 2.944 ms - 74\u001b[0m","timestamp":"2026-06-02T08:56:20.890Z"}
+{"level":"info","message":"\u001b[0mPOST /api/trx/prepaid \u001b[33m401\u001b[0m 0.700 ms - 74\u001b[0m","timestamp":"2026-06-02T08:56:52.127Z"}
+{"level":"warn","message":"400 - Produk tidak aktif - /api/trx/prepaid - POST - ::1","timestamp":"2026-06-02T08:58:04.533Z"}
+{"level":"info","message":"\u001b[0mPOST /api/trx/prepaid \u001b[33m400\u001b[0m 24.758 ms - 91\u001b[0m","timestamp":"2026-06-02T08:58:04.535Z"}
+{"level":"info","message":"Email sent: <07b3bbf1-cd1d-befd-917a-3a7c19e67772@cocogo.store>","timestamp":"2026-06-02T09:00:34.624Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/2fa/otp/send \u001b[32m200\u001b[0m 8338.347 ms - 65\u001b[0m","timestamp":"2026-06-02T09:00:34.627Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/configs \u001b[32m200\u001b[0m 3994.843 ms - 60\u001b[0m","timestamp":"2026-06-02T09:00:52.593Z"}
+{"level":"info","message":"Email sent: <0799022d-dc30-88d9-ad06-750227bee0cf@cocogo.store>","timestamp":"2026-06-02T09:02:05.224Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/2fa/otp/send \u001b[32m200\u001b[0m 8852.684 ms - 65\u001b[0m","timestamp":"2026-06-02T09:02:05.224Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/configs \u001b[33m403\u001b[0m 3.561 ms - 103\u001b[0m","timestamp":"2026-06-02T09:02:26.731Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/configs \u001b[32m200\u001b[0m 4240.594 ms - 60\u001b[0m","timestamp":"2026-06-02T09:02:49.724Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/configs/telegram/setup \u001b[33m403\u001b[0m 4.362 ms - 103\u001b[0m","timestamp":"2026-06-02T09:02:49.739Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/configs \u001b[33m403\u001b[0m 5.419 ms - 103\u001b[0m","timestamp":"2026-06-02T09:02:58.755Z"}
+{"level":"info","message":"Email sent: <d630356d-24b0-540f-5afe-4d32cdfdea64@cocogo.store>","timestamp":"2026-06-02T09:04:15.143Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/2fa/otp/send \u001b[32m200\u001b[0m 8065.725 ms - 65\u001b[0m","timestamp":"2026-06-02T09:04:15.144Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/configs \u001b[32m200\u001b[0m 3580.811 ms - 60\u001b[0m","timestamp":"2026-06-02T09:04:45.188Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/configs/telegram/setup \u001b[33m403\u001b[0m 2.908 ms - 103\u001b[0m","timestamp":"2026-06-02T09:04:45.200Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/configs \u001b[33m403\u001b[0m 4.497 ms - 103\u001b[0m","timestamp":"2026-06-02T09:05:03.457Z"}
+{"level":"info","message":"Email sent: <4328a6d8-b691-09d5-b5b0-9a497a697ded@cocogo.store>","timestamp":"2026-06-02T09:05:23.432Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/2fa/otp/send \u001b[32m200\u001b[0m 8116.906 ms - 65\u001b[0m","timestamp":"2026-06-02T09:05:23.433Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/configs \u001b[32m200\u001b[0m 8579.487 ms - 60\u001b[0m","timestamp":"2026-06-02T09:05:52.202Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/configs/telegram/setup \u001b[33m403\u001b[0m 4.486 ms - 103\u001b[0m","timestamp":"2026-06-02T09:05:52.224Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T09:06:20.130Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.150","timestamp":"2026-06-02T09:06:20.130Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-02T09:06:20.158Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 1142.970 ms - 732\u001b[0m","timestamp":"2026-06-02T09:06:20.978Z"}
+{"level":"info","message":"Database pool closed","timestamp":"2026-06-02T09:09:29.615Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T09:09:31.338Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T09:09:31.345Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T09:09:32.134Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T09:09:32.135Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T09:09:32.138Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T09:09:32.139Z"}
+{"level":"info","message":"Email sent: <3076ef63-f14f-3bde-0c48-51f89a1ba2e0@cocogo.store>","timestamp":"2026-06-02T09:10:29.064Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/2fa/otp/send \u001b[32m200\u001b[0m 9894.956 ms - 65\u001b[0m","timestamp":"2026-06-02T09:10:29.069Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/configs \u001b[32m200\u001b[0m 3744.217 ms - 60\u001b[0m","timestamp":"2026-06-02T09:10:45.311Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/configs/telegram/setup \u001b[33m403\u001b[0m 7.837 ms - 103\u001b[0m","timestamp":"2026-06-02T09:10:45.332Z"}
+{"level":"info","message":"Background Transaction Started (a1e05f54-45f5-4842-90fe-5dcb431785e7)","timestamp":"2026-06-02T09:12:37.059Z"}
+{"level":"info","message":"\u001b[0mPOST /api/trx/prepaid \u001b[32m200\u001b[0m 131.326 ms - 409\u001b[0m","timestamp":"2026-06-02T09:12:37.061Z"}
+{"level":"error","message":"H2H.id Order Error: Produk tagihan wajib dicek lebih dulu via /trx/inquiry. Sertakan parameter inquiry_id pada order.","timestamp":"2026-06-02T09:12:37.816Z"}
+{"level":"error","message":"Background Transaction Error (a1e05f54-45f5-4842-90fe-5dcb431785e7): Produk tagihan wajib dicek lebih dulu via /trx/inquiry. Sertakan parameter inquiry_id pada order.","stack":"Error: Produk tagihan wajib dicek lebih dulu via /trx/inquiry. Sertakan parameter inquiry_id pada order.\n    at Object.processTransaction (file:///home/cavathaeon/OTRVUE/NEOPAY/src/integrations/h2h/index.js:85:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async file:///home/cavathaeon/OTRVUE/NEOPAY/src/modules/transaction/service.js:138:34","timestamp":"2026-06-02T09:12:37.817Z"}
+{"level":"error","message":"H2H.id Bill Inquiry Error: Tidak terautentikasi. Silakan login terlebih dahulu.","timestamp":"2026-06-02T09:14:56.676Z"}
+{"level":"error","message":"H2H.id Inquiry Error:","timestamp":"2026-06-02T09:14:57.257Z"}
+{"level":"error","message":"500 - Gagal melakukan inquiry ke H2H.id - /api/trx/postpaid/inquiry - POST - ::1","timestamp":"2026-06-02T09:14:57.258Z"}
+{"level":"error","timestamp":"2026-06-02T09:14:57.258Z"}
+{"level":"info","message":"\u001b[0mPOST /api/trx/postpaid/inquiry \u001b[31m500\u001b[0m 1462.019 ms - 90\u001b[0m","timestamp":"2026-06-02T09:14:57.260Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T09:16:51.557Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T09:16:51.564Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T09:16:52.478Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T09:16:52.479Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T09:16:52.481Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T09:16:52.482Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T09:16:57.810Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-02T09:16:57.817Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-02T09:16:58.419Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-02T09:16:58.420Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-02T09:16:58.423Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-02T09:16:58.423Z"}
+{"level":"error","message":"H2H.id Bill Inquiry Error: Tidak terautentikasi. Silakan login terlebih dahulu.","timestamp":"2026-06-02T09:17:50.913Z"}
+{"level":"error","message":"H2H.id Inquiry Error:","timestamp":"2026-06-02T09:17:51.067Z"}
+{"level":"error","message":"500 - Gagal melakukan inquiry ke H2H.id - /api/trx/postpaid/inquiry - POST - ::1","timestamp":"2026-06-02T09:17:51.068Z"}
+{"level":"error","timestamp":"2026-06-02T09:17:51.069Z"}
+{"level":"info","message":"\u001b[0mPOST /api/trx/postpaid/inquiry \u001b[31m500\u001b[0m 2877.895 ms - 90\u001b[0m","timestamp":"2026-06-02T09:17:51.076Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-02T10:36:02.441Z"}

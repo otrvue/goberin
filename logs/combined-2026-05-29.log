@@ -1,0 +1,321 @@
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T18:40:23.176Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T18:40:23.180Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T18:41:41.826Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T18:41:41.826Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 5438.962 ms - 478\u001b[0m","timestamp":"2026-05-28T18:41:42.050Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T18:48:21.536Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T18:48:21.540Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T18:48:28.290Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T18:48:28.294Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T18:48:34.980Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T18:48:34.986Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T18:48:40.855Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T18:48:40.859Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T18:48:48.209Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T18:48:48.213Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T18:54:45.550Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T18:54:45.555Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T18:58:31.431Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T18:58:31.432Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 913.765 ms - 478\u001b[0m","timestamp":"2026-05-28T18:58:31.934Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T18:58:46.139Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T18:58:46.140Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 658.556 ms - 478\u001b[0m","timestamp":"2026-05-28T18:58:46.601Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:06:02.456Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:06:02.457Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 369.115 ms - 478\u001b[0m","timestamp":"2026-05-28T19:06:02.631Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:06:04.563Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:06:04.563Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 209.972 ms - 478\u001b[0m","timestamp":"2026-05-28T19:06:04.696Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:11:56.908Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:11:56.908Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 6038.217 ms - 478\u001b[0m","timestamp":"2026-05-28T19:11:57.550Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:12:01.716Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:12:01.716Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 358.324 ms - 478\u001b[0m","timestamp":"2026-05-28T19:12:01.908Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:12:34.317Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:12:34.318Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 683.941 ms - 478\u001b[0m","timestamp":"2026-05-28T19:12:34.619Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:12:58.666Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:12:58.667Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 356.885 ms - 478\u001b[0m","timestamp":"2026-05-28T19:12:58.826Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:13:44.910Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:13:44.910Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 849.793 ms - 478\u001b[0m","timestamp":"2026-05-28T19:13:45.392Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:14:19.949Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:14:19.950Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 6095.008 ms - 478\u001b[0m","timestamp":"2026-05-28T19:14:25.653Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:15:35.857Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:15:35.857Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 778.850 ms - 478\u001b[0m","timestamp":"2026-05-28T19:15:36.243Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:15:50.537Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:15:50.538Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 1193.496 ms - 478\u001b[0m","timestamp":"2026-05-28T19:15:51.356Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:16:00.223Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:16:00.224Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 472.181 ms - 478\u001b[0m","timestamp":"2026-05-28T19:16:00.509Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:16:14.629Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:16:14.631Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 480.021 ms - 478\u001b[0m","timestamp":"2026-05-28T19:16:14.931Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:17:04.704Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:17:04.704Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 1168.299 ms - 478\u001b[0m","timestamp":"2026-05-28T19:17:05.486Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:18:54.930Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:18:54.930Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 865.266 ms - 478\u001b[0m","timestamp":"2026-05-28T19:18:55.407Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:19:17.825Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:19:17.825Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 438.345 ms - 478\u001b[0m","timestamp":"2026-05-28T19:19:18.084Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/markups/simulate \u001b[33m404\u001b[0m 2.200 ms - 114\u001b[0m","timestamp":"2026-05-28T19:22:38.559Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:23:58.566Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:23:58.566Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 780.509 ms - 478\u001b[0m","timestamp":"2026-05-28T19:23:58.724Z"}
+{"level":"info","message":"Database pool closed","timestamp":"2026-05-28T19:25:49.117Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T19:35:21.722Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T19:35:21.727Z"}
+{"level":"info","message":"Database pool closed","timestamp":"2026-05-28T19:40:57.963Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T19:50:51.382Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T19:50:51.386Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:58:37.974Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:58:37.975Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 828.855 ms - 478\u001b[0m","timestamp":"2026-05-28T19:58:38.414Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T20:05:36.351Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T21:48:07.000Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T21:48:07.004Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T21:49:00.117Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T21:49:00.117Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 1414.867 ms - 478\u001b[0m","timestamp":"2026-05-28T21:49:00.595Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/2fa/disable \u001b[32m200\u001b[0m 112.816 ms - 128\u001b[0m","timestamp":"2026-05-28T21:49:51.077Z"}
+{"level":"info","message":"\u001b[0mPUT /api/users/regenerate-api-key \u001b[33m403\u001b[0m 5.225 ms - 103\u001b[0m","timestamp":"2026-05-28T21:50:10.515Z"}
+{"level":"info","message":"\u001b[0mPUT /api/users/regenerate-api-key \u001b[33m403\u001b[0m 5.206 ms - 103\u001b[0m","timestamp":"2026-05-28T21:50:12.321Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.414 ms - 74\u001b[0m","timestamp":"2026-05-28T21:50:29.385Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T21:50:32.217Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 102.249 ms - 95\u001b[0m","timestamp":"2026-05-28T21:50:32.218Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T21:50:36.827Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 99.857 ms - 95\u001b[0m","timestamp":"2026-05-28T21:50:36.828Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T21:50:43.766Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 96.163 ms - 95\u001b[0m","timestamp":"2026-05-28T21:50:43.766Z"}
+{"level":"info","message":"Email sent: <9b938ce0-e8bf-bae3-bdff-995227a2a9d2@cocogo.store>","timestamp":"2026-05-28T21:50:57.733Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 8569.489 ms - 384\u001b[0m","timestamp":"2026-05-28T21:50:57.734Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login/verify \u001b[32m200\u001b[0m 125.975 ms - 1020\u001b[0m","timestamp":"2026-05-28T21:51:32.375Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T21:51:32.779Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T21:51:32.780Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 865.202 ms - 478\u001b[0m","timestamp":"2026-05-28T21:51:33.384Z"}
+{"level":"info","message":"\u001b[0mGET /api/trx/history?page=1&limit=10 \u001b[33m401\u001b[0m 0.465 ms - 74\u001b[0m","timestamp":"2026-05-28T21:51:36.071Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.227 ms - 74\u001b[0m","timestamp":"2026-05-28T21:51:36.498Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T21:51:38.497Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 96.253 ms - 95\u001b[0m","timestamp":"2026-05-28T21:51:38.498Z"}
+{"level":"info","message":"Email sent: <ab21efc9-dd2e-a6fa-5541-4b4cda0976e4@cocogo.store>","timestamp":"2026-05-28T21:51:51.642Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 8574.861 ms - 384\u001b[0m","timestamp":"2026-05-28T21:51:51.643Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T21:52:11.389Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T21:55:20.111Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T21:55:20.116Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 2.933 ms - 74\u001b[0m","timestamp":"2026-05-28T21:55:31.410Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T21:55:35.689Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 118.484 ms - 95\u001b[0m","timestamp":"2026-05-28T21:55:35.690Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T21:55:40.303Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 99.772 ms - 95\u001b[0m","timestamp":"2026-05-28T21:55:40.304Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T21:55:47.519Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 94.020 ms - 95\u001b[0m","timestamp":"2026-05-28T21:55:47.520Z"}
+{"level":"info","message":"Email sent: <c6c9020b-01c8-3e79-a154-19f3e4bfcace@cocogo.store>","timestamp":"2026-05-28T21:55:57.525Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 8659.676 ms - 384\u001b[0m","timestamp":"2026-05-28T21:55:57.528Z"}
+{"level":"error","message":"400 - Kode OTP tidak valid - /api/auth/login/verify - POST - ::1","timestamp":"2026-05-28T21:56:11.962Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login/verify \u001b[33m400\u001b[0m 5.515 ms - 91\u001b[0m","timestamp":"2026-05-28T21:56:11.963Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login/verify \u001b[32m200\u001b[0m 118.414 ms - 1020\u001b[0m","timestamp":"2026-05-28T21:56:30.634Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T21:56:31.805Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T21:56:31.805Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 780.417 ms - 478\u001b[0m","timestamp":"2026-05-28T21:56:32.155Z"}
+{"level":"info","message":"Email sent: <cb32cd86-ee68-bf93-3cff-d24943d09e92@cocogo.store>","timestamp":"2026-05-28T21:57:29.582Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/2fa/otp/send \u001b[32m200\u001b[0m 8510.284 ms - 65\u001b[0m","timestamp":"2026-05-28T21:57:29.584Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/2fa/enable \u001b[32m200\u001b[0m 254.535 ms - 69\u001b[0m","timestamp":"2026-05-28T21:57:56.980Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.247 ms - 74\u001b[0m","timestamp":"2026-05-28T21:58:04.861Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 97.527 ms - 379\u001b[0m","timestamp":"2026-05-28T21:58:15.534Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login/verify \u001b[32m200\u001b[0m 2.604 ms - 1024\u001b[0m","timestamp":"2026-05-28T21:58:30.627Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T21:58:31.245Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T21:58:31.246Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 946.359 ms - 478\u001b[0m","timestamp":"2026-05-28T21:58:31.803Z"}
+{"level":"info","message":"\u001b[0mGET /api/trx/history?page=1&limit=10 \u001b[33m401\u001b[0m 0.457 ms - 74\u001b[0m","timestamp":"2026-05-28T21:58:34.019Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.187 ms - 74\u001b[0m","timestamp":"2026-05-28T21:58:34.551Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T21:58:37.419Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 104.378 ms - 95\u001b[0m","timestamp":"2026-05-28T21:58:37.420Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 121.595 ms - 379\u001b[0m","timestamp":"2026-05-28T21:58:43.561Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.341 ms - 74\u001b[0m","timestamp":"2026-05-28T22:00:18.842Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.204 ms - 74\u001b[0m","timestamp":"2026-05-28T22:00:20.055Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.197 ms - 74\u001b[0m","timestamp":"2026-05-28T22:00:27.738Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.176 ms - 74\u001b[0m","timestamp":"2026-05-28T22:00:33.093Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.174 ms - 74\u001b[0m","timestamp":"2026-05-28T22:00:33.322Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T22:03:24.989Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T22:03:24.993Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T22:03:34.030Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T22:03:34.034Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T22:03:41.762Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T22:03:41.768Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T22:03:49.658Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T22:03:49.662Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T22:03:54.694Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T22:03:54.698Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T22:04:01.519Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T22:04:01.525Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T22:04:06.814Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T22:04:06.819Z"}
+{"level":"info","message":"Email sent: <8373d3d3-37d0-756e-df92-8d1224806abf@cocogo.store>","timestamp":"2026-05-28T22:06:22.100Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/forgot-password \u001b[32m200\u001b[0m 8388.010 ms - 107\u001b[0m","timestamp":"2026-05-28T22:06:22.107Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/reset-password \u001b[32m200\u001b[0m 280.997 ms - 99\u001b[0m","timestamp":"2026-05-28T22:06:43.406Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 104.710 ms - 379\u001b[0m","timestamp":"2026-05-28T22:06:52.914Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/logout \u001b[32m200\u001b[0m 4.166 ms - 44\u001b[0m","timestamp":"2026-05-28T22:07:05.529Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.691 ms - 74\u001b[0m","timestamp":"2026-05-28T22:13:56.045Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 3.179 ms - 74\u001b[0m","timestamp":"2026-05-28T22:14:10.576Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.227 ms - 74\u001b[0m","timestamp":"2026-05-28T22:19:08.349Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.240 ms - 74\u001b[0m","timestamp":"2026-05-28T22:19:08.612Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 2.205 ms - 74\u001b[0m","timestamp":"2026-05-28T22:19:36.491Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.271 ms - 74\u001b[0m","timestamp":"2026-05-28T22:19:36.720Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.211 ms - 74\u001b[0m","timestamp":"2026-05-28T22:22:12.720Z"}
+{"level":"info","message":"Email sent: <d94d4f80-d296-fca6-db69-fc52cbee78b4@cocogo.store>","timestamp":"2026-05-28T22:22:28.284Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/forgot-password \u001b[32m200\u001b[0m 8542.074 ms - 107\u001b[0m","timestamp":"2026-05-28T22:22:28.285Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.239 ms - 74\u001b[0m","timestamp":"2026-05-28T22:29:17.181Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.172 ms - 74\u001b[0m","timestamp":"2026-05-28T22:29:17.437Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T22:32:41.322Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T22:32:41.327Z"}
+{"level":"info","message":"Email sent: <9397b88f-1b57-3c5f-9492-96dad1f09103@cocogo.store>","timestamp":"2026-05-28T22:33:51.057Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/forgot-password \u001b[32m200\u001b[0m 8653.184 ms - 107\u001b[0m","timestamp":"2026-05-28T22:33:51.060Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T22:34:38.056Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T22:34:38.060Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T22:34:52.127Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T22:34:52.131Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T22:34:58.915Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T22:34:58.920Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T22:35:06.660Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T22:35:06.664Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-28T22:35:07.438Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-28T22:35:07.442Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 2.999 ms - 74\u001b[0m","timestamp":"2026-05-28T22:35:23.388Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.626 ms - 74\u001b[0m","timestamp":"2026-05-28T22:35:23.654Z"}
+{"level":"info","message":"Email sent: <c06b23d9-fccd-7cb3-487c-85dd7a42597b@cocogo.store>","timestamp":"2026-05-28T22:35:36.594Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/forgot-password \u001b[32m200\u001b[0m 8489.453 ms - 107\u001b[0m","timestamp":"2026-05-28T22:35:36.595Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.240 ms - 74\u001b[0m","timestamp":"2026-05-28T22:36:10.632Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.335 ms - 74\u001b[0m","timestamp":"2026-05-28T22:36:10.857Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.362 ms - 74\u001b[0m","timestamp":"2026-05-28T22:36:56.932Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:37:10.239Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 103.050 ms - 95\u001b[0m","timestamp":"2026-05-28T22:37:10.240Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:37:18.338Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 94.849 ms - 95\u001b[0m","timestamp":"2026-05-28T22:37:18.339Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:37:27.209Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 109.002 ms - 95\u001b[0m","timestamp":"2026-05-28T22:37:27.210Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:37:41.794Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 94.364 ms - 95\u001b[0m","timestamp":"2026-05-28T22:37:41.795Z"}
+{"level":"error","message":"400 - Email already registered - /api/auth/register - POST - ::1","timestamp":"2026-05-28T22:37:53.723Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/register \u001b[33m400\u001b[0m 2.734 ms - 93\u001b[0m","timestamp":"2026-05-28T22:37:53.724Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:38:05.222Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 108.717 ms - 95\u001b[0m","timestamp":"2026-05-28T22:38:05.223Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:38:09.655Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 100.304 ms - 95\u001b[0m","timestamp":"2026-05-28T22:38:09.656Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:38:22.759Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 94.497 ms - 95\u001b[0m","timestamp":"2026-05-28T22:38:22.760Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:38:27.826Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 102.583 ms - 95\u001b[0m","timestamp":"2026-05-28T22:38:27.827Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:38:50.618Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 98.730 ms - 95\u001b[0m","timestamp":"2026-05-28T22:38:50.619Z"}
+{"level":"info","message":"Email sent: <d7c3a4f5-a9a4-c5e7-0bdc-8406e064f9c6@cocogo.store>","timestamp":"2026-05-28T22:39:21.081Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 8423.705 ms - 384\u001b[0m","timestamp":"2026-05-28T22:39:21.081Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:40:40.785Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 2.534 ms - 95\u001b[0m","timestamp":"2026-05-28T22:40:40.786Z"}
+{"level":"info","message":"Email sent: <a94af0b4-46a2-0932-d137-aa901d65594e@cocogo.store>","timestamp":"2026-05-28T22:41:10.931Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 8365.438 ms - 384\u001b[0m","timestamp":"2026-05-28T22:41:10.932Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login/verify \u001b[32m200\u001b[0m 109.374 ms - 1036\u001b[0m","timestamp":"2026-05-28T22:41:31.854Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/configs \u001b[33m403\u001b[0m 2.543 ms - 184\u001b[0m","timestamp":"2026-05-28T22:43:09.646Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/configs \u001b[33m403\u001b[0m 2.985 ms - 184\u001b[0m","timestamp":"2026-05-28T22:43:20.132Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/configs \u001b[33m403\u001b[0m 1.992 ms - 184\u001b[0m","timestamp":"2026-05-28T22:43:25.826Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-29T05:43:26.337Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-29T05:43:26.342Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T05:44:39.020Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T05:44:39.021Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 1413.431 ms - 479\u001b[0m","timestamp":"2026-05-29T05:44:39.186Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T05:44:44.820Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T05:44:44.821Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 388.980 ms - 479\u001b[0m","timestamp":"2026-05-29T05:44:44.981Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T05:44:54.674Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T05:44:54.675Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 4201.301 ms - 479\u001b[0m","timestamp":"2026-05-29T05:44:58.517Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/logout \u001b[32m200\u001b[0m 3.091 ms - 44\u001b[0m","timestamp":"2026-05-29T05:45:05.116Z"}
+{"level":"info","message":"\u001b[0mGET /api/trx/history?page=1&limit=10 \u001b[33m401\u001b[0m 0.499 ms - 74\u001b[0m","timestamp":"2026-05-29T05:45:05.198Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.221 ms - 74\u001b[0m","timestamp":"2026-05-29T05:45:06.257Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.339 ms - 74\u001b[0m","timestamp":"2026-05-29T05:45:46.895Z"}
+{"level":"info","message":"\u001b[0mGET /api/trx/history?page=1&limit=10 \u001b[33m401\u001b[0m 0.349 ms - 74\u001b[0m","timestamp":"2026-05-29T05:45:47.030Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/profile \u001b[33m401\u001b[0m 0.263 ms - 74\u001b[0m","timestamp":"2026-05-29T05:45:47.038Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.188 ms - 74\u001b[0m","timestamp":"2026-05-29T05:45:47.202Z"}
+{"level":"info","message":"Email sent: <ace82c31-0b4d-fe29-aec7-79896cb00ebb@cocogo.store>","timestamp":"2026-05-29T05:46:09.940Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/forgot-password \u001b[32m200\u001b[0m 12981.065 ms - 107\u001b[0m","timestamp":"2026-05-29T05:46:09.941Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.361 ms - 74\u001b[0m","timestamp":"2026-05-29T05:47:06.740Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.180 ms - 74\u001b[0m","timestamp":"2026-05-29T05:47:06.952Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.209 ms - 74\u001b[0m","timestamp":"2026-05-29T05:47:29.382Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.181 ms - 74\u001b[0m","timestamp":"2026-05-29T05:47:29.962Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.175 ms - 74\u001b[0m","timestamp":"2026-05-29T05:55:31.345Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.175 ms - 74\u001b[0m","timestamp":"2026-05-29T05:55:31.596Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.174 ms - 74\u001b[0m","timestamp":"2026-05-29T05:55:42.674Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.178 ms - 74\u001b[0m","timestamp":"2026-05-29T05:55:42.902Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.205 ms - 74\u001b[0m","timestamp":"2026-05-29T05:57:38.730Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.180 ms - 74\u001b[0m","timestamp":"2026-05-29T05:58:39.483Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-29T06:04:57.788Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-29T06:04:57.794Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-29T06:05:07.297Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-29T06:05:07.303Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-29T06:05:13.815Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-29T06:05:13.821Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 2.988 ms - 74\u001b[0m","timestamp":"2026-05-29T06:06:55.411Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.698 ms - 74\u001b[0m","timestamp":"2026-05-29T06:07:23.980Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.267 ms - 74\u001b[0m","timestamp":"2026-05-29T06:07:31.649Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.276 ms - 74\u001b[0m","timestamp":"2026-05-29T06:07:31.883Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.234 ms - 74\u001b[0m","timestamp":"2026-05-29T06:07:36.222Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.269 ms - 74\u001b[0m","timestamp":"2026-05-29T06:07:38.986Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.314 ms - 74\u001b[0m","timestamp":"2026-05-29T06:07:44.193Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.296 ms - 74\u001b[0m","timestamp":"2026-05-29T06:07:55.956Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.382 ms - 74\u001b[0m","timestamp":"2026-05-29T06:10:38.510Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.347 ms - 74\u001b[0m","timestamp":"2026-05-29T06:10:56.533Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.221 ms - 74\u001b[0m","timestamp":"2026-05-29T06:12:03.505Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/reset-password \u001b[32m200\u001b[0m 206.260 ms - 99\u001b[0m","timestamp":"2026-05-29T06:12:32.668Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.178 ms - 74\u001b[0m","timestamp":"2026-05-29T06:12:34.969Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 97.812 ms - 379\u001b[0m","timestamp":"2026-05-29T06:12:37.746Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login/verify \u001b[32m200\u001b[0m 4.446 ms - 1080\u001b[0m","timestamp":"2026-05-29T06:12:57.507Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T06:12:58.229Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T06:12:58.229Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 974.901 ms - 479\u001b[0m","timestamp":"2026-05-29T06:12:58.739Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/logout \u001b[32m200\u001b[0m 3.283 ms - 44\u001b[0m","timestamp":"2026-05-29T06:14:06.424Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.344 ms - 74\u001b[0m","timestamp":"2026-05-29T06:14:06.687Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-29T06:14:11.823Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 111.068 ms - 95\u001b[0m","timestamp":"2026-05-29T06:14:11.823Z"}
+{"level":"info","message":"Email sent: <63463951-7401-20a4-3877-955a1e1472f3@cocogo.store>","timestamp":"2026-05-29T06:14:33.262Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 8795.563 ms - 384\u001b[0m","timestamp":"2026-05-29T06:14:33.262Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login/verify \u001b[32m200\u001b[0m 125.512 ms - 1038\u001b[0m","timestamp":"2026-05-29T06:15:13.098Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T06:15:13.481Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T06:15:13.482Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 5281.993 ms - 479\u001b[0m","timestamp":"2026-05-29T06:15:18.572Z"}
+{"level":"info","message":"Email sent: <aadbf29c-4e7b-9249-49bf-73482e4d7097@cocogo.store>","timestamp":"2026-05-29T06:15:53.269Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/2fa/otp/send \u001b[32m200\u001b[0m 8584.530 ms - 65\u001b[0m","timestamp":"2026-05-29T06:15:53.269Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/users/ca5c7871-a19e-4307-8da9-e2cbf9063d74 \u001b[32m200\u001b[0m 192.276 ms - 213\u001b[0m","timestamp":"2026-05-29T06:16:12.119Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/users?page=1&limit=20 \u001b[33m403\u001b[0m 2.168 ms - 63\u001b[0m","timestamp":"2026-05-29T06:16:12.136Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/users/stats \u001b[33m403\u001b[0m 1.569 ms - 63\u001b[0m","timestamp":"2026-05-29T06:16:12.137Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/users/ca5c7871-a19e-4307-8da9-e2cbf9063d74 \u001b[33m403\u001b[0m 1.949 ms - 63\u001b[0m","timestamp":"2026-05-29T06:16:15.787Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 6.039 ms - 63\u001b[0m","timestamp":"2026-05-29T06:16:25.596Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/users/stats \u001b[33m403\u001b[0m 8.040 ms - 63\u001b[0m","timestamp":"2026-05-29T06:16:25.684Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/users?page=1&limit=20 \u001b[33m403\u001b[0m 1.415 ms - 63\u001b[0m","timestamp":"2026-05-29T06:16:25.688Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 1.387 ms - 63\u001b[0m","timestamp":"2026-05-29T06:16:37.377Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/users/stats \u001b[33m403\u001b[0m 1.388 ms - 63\u001b[0m","timestamp":"2026-05-29T06:16:37.479Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/users?page=1&limit=20 \u001b[33m403\u001b[0m 1.840 ms - 63\u001b[0m","timestamp":"2026-05-29T06:16:37.485Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 1.285 ms - 63\u001b[0m","timestamp":"2026-05-29T06:17:33.910Z"}
+{"level":"info","message":"\u001b[0mPUT /api/users/change-password \u001b[32m200\u001b[0m 389.838 ms - 53\u001b[0m","timestamp":"2026-05-29T06:23:17.272Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/logout \u001b[32m200\u001b[0m 1.523 ms - 44\u001b[0m","timestamp":"2026-05-29T06:24:31.248Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.191 ms - 74\u001b[0m","timestamp":"2026-05-29T06:24:31.755Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 101.791 ms - 379\u001b[0m","timestamp":"2026-05-29T06:24:36.348Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login/verify \u001b[32m200\u001b[0m 3.347 ms - 1080\u001b[0m","timestamp":"2026-05-29T06:24:57.056Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T06:24:57.674Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T06:24:57.674Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 1241.368 ms - 479\u001b[0m","timestamp":"2026-05-29T06:24:58.525Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/products/OK-SDG75 \u001b[32m200\u001b[0m 504.375 ms - 219\u001b[0m","timestamp":"2026-05-29T06:25:26.798Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/products/OK-SDG75 \u001b[32m200\u001b[0m 248.390 ms - 219\u001b[0m","timestamp":"2026-05-29T06:25:31.230Z"}
+{"level":"info","message":"\u001b[0mPUT /api/users/regenerate-api-key \u001b[32m200\u001b[0m 125.830 ms - 132\u001b[0m","timestamp":"2026-05-29T06:25:48.270Z"}
+{"level":"info","message":"\u001b[0mPUT /api/users/regenerate-api-key \u001b[33m403\u001b[0m 3.214 ms - 103\u001b[0m","timestamp":"2026-05-29T06:26:08.891Z"}
+{"level":"info","message":"\u001b[0mPUT /api/users/regenerate-api-key \u001b[32m200\u001b[0m 158.863 ms - 132\u001b[0m","timestamp":"2026-05-29T06:26:16.884Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T06:27:09.500Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T06:27:09.501Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 737.620 ms - 479\u001b[0m","timestamp":"2026-05-29T06:27:09.969Z"}
+{"level":"info","message":"Database pool closed","timestamp":"2026-05-29T06:33:26.826Z"}

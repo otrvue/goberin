@@ -1,0 +1,47 @@
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-30T12:39:26.007Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-05-30T12:39:26.144Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-05-30T12:39:26.595Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-05-30T12:39:26.597Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-30T12:39:26.602Z"}
+{"expiredAt":"2026-05-30T06:24:57.000Z","level":"error","message":"Authentication error: jwt expired","name":"TokenExpiredError","stack":"TokenExpiredError: jwt expired\n    at /home/cavathaeon/OTRVUE/NEOPAY/node_modules/jsonwebtoken/verify.js:190:21\n    at getSecret (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/jsonwebtoken/verify.js:97:14)\n    at module.exports [as verify] (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/jsonwebtoken/verify.js:101:10)\n    at authenticate (file:///home/cavathaeon/OTRVUE/NEOPAY/src/middleware/auth.middleware.js:17:29)\n    at Layer.handle [as handle_request] (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/layer.js:95:5)\n    at /home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/index.js:284:15\n    at router.process_params (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/index.js:346:12)","timestamp":"2026-05-30T12:39:36.307Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 7.230 ms - 81\u001b[0m","timestamp":"2026-05-30T12:39:36.312Z"}
+{"expiredAt":"2026-05-30T06:24:57.000Z","level":"error","message":"Authentication error: jwt expired","name":"TokenExpiredError","stack":"TokenExpiredError: jwt expired\n    at /home/cavathaeon/OTRVUE/NEOPAY/node_modules/jsonwebtoken/verify.js:190:21\n    at getSecret (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/jsonwebtoken/verify.js:97:14)\n    at module.exports [as verify] (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/jsonwebtoken/verify.js:101:10)\n    at authenticate (file:///home/cavathaeon/OTRVUE/NEOPAY/src/middleware/auth.middleware.js:17:29)\n    at Layer.handle [as handle_request] (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/layer.js:95:5)\n    at next (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/layer.js:95:5)\n    at /home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/index.js:284:15\n    at router.process_params (/home/cavathaeon/OTRVUE/NEOPAY/node_modules/express/lib/router/index.js:346:12)","timestamp":"2026-05-30T12:39:36.355Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/profile \u001b[33m401\u001b[0m 1.582 ms - 81\u001b[0m","timestamp":"2026-05-30T12:39:36.358Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.790 ms - 74\u001b[0m","timestamp":"2026-05-30T12:39:37.003Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 138.968 ms - 379\u001b[0m","timestamp":"2026-05-30T12:39:41.363Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login/verify \u001b[32m200\u001b[0m 6.878 ms - 1080\u001b[0m","timestamp":"2026-05-30T12:40:01.305Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-30T12:40:02.136Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-30T12:40:02.137Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 703.899 ms - 479\u001b[0m","timestamp":"2026-05-30T12:40:02.306Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/configs \u001b[33m403\u001b[0m 6.066 ms - 179\u001b[0m","timestamp":"2026-05-30T12:40:12.003Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-30T12:47:22.243Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-30T12:47:48.127Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-05-30T12:47:48.134Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-05-30T12:47:48.862Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-05-30T12:47:48.863Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-30T12:47:48.865Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-30T12:54:36.331Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-30T12:54:36.332Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 534.717 ms - 479\u001b[0m","timestamp":"2026-05-30T12:54:36.654Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/configs \u001b[33m403\u001b[0m 5.566 ms - 103\u001b[0m","timestamp":"2026-05-30T12:56:38.599Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/configs \u001b[32m200\u001b[0m 2208.086 ms - 60\u001b[0m","timestamp":"2026-05-30T12:56:48.858Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/landing/admin \u001b[32m200\u001b[0m 2.277 ms - 61\u001b[0m","timestamp":"2026-05-30T13:07:59.615Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/landing/admin \u001b[32m200\u001b[0m 1.240 ms - 61\u001b[0m","timestamp":"2026-05-30T13:08:05.822Z"}
+{"level":"info","message":"\u001b[0mPUT /api/users/bukaolshop-config \u001b[33m403\u001b[0m 4.539 ms - 103\u001b[0m","timestamp":"2026-05-30T13:13:13.867Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/configs \u001b[33m403\u001b[0m 3.070 ms - 103\u001b[0m","timestamp":"2026-05-30T13:18:25.711Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/admin/configs \u001b[33m403\u001b[0m 3.226 ms - 103\u001b[0m","timestamp":"2026-05-30T13:18:39.496Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-30T13:19:03.934Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-30T13:19:03.934Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 495.292 ms - 479\u001b[0m","timestamp":"2026-05-30T13:19:04.223Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-05-30T14:49:15.883Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-05-30T14:49:16.054Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-05-30T14:49:16.358Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-05-30T14:49:16.359Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-05-30T14:49:16.361Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-30T14:50:38.860Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-30T14:50:38.861Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 994.319 ms - 479\u001b[0m","timestamp":"2026-05-30T14:50:39.244Z"}
+{"level":"info","message":"\u001b[0mPOST /api/upload \u001b[32m200\u001b[0m 21.682 ms - 171\u001b[0m","timestamp":"2026-05-30T14:52:21.663Z"}
+{"level":"info","message":"\u001b[0mPOST /api/upload \u001b[32m200\u001b[0m 7.660 ms - 185\u001b[0m","timestamp":"2026-05-30T14:52:28.655Z"}
+{"level":"info","message":"\u001b[0mPATCH /api/landing/admin \u001b[32m200\u001b[0m 1431.040 ms - 61\u001b[0m","timestamp":"2026-05-30T14:52:34.217Z"}
+{"level":"info","message":"Database pool closed","timestamp":"2026-05-30T14:56:42.079Z"}

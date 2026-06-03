@@ -1,0 +1,359 @@
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T05:29:35.285Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T05:29:35.369Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T05:29:35.750Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T05:29:35.751Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T05:29:35.753Z"}
+{"level":"info","message":"\u001b[0mGET /hero-bg.png \u001b[33m404\u001b[0m 2.717 ms - 210\u001b[0m","timestamp":"2026-06-01T05:31:01.988Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 6.534 ms - 71\u001b[0m","timestamp":"2026-06-01T05:31:04.485Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/dashboard/charts?period=week \u001b[33m401\u001b[0m 1.105 ms - 74\u001b[0m","timestamp":"2026-06-01T05:34:03.804Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/transactions?page=1&limit=10 \u001b[33m401\u001b[0m 1.034 ms - 74\u001b[0m","timestamp":"2026-06-01T05:34:03.812Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/dashboard/stats \u001b[33m401\u001b[0m 0.367 ms - 74\u001b[0m","timestamp":"2026-06-01T05:34:03.815Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/profile \u001b[33m401\u001b[0m 0.318 ms - 74\u001b[0m","timestamp":"2026-06-01T05:34:03.817Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[33m401\u001b[0m 0.312 ms - 74\u001b[0m","timestamp":"2026-06-01T05:34:04.030Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/balances/vendors \u001b[33m401\u001b[0m 0.262 ms - 74\u001b[0m","timestamp":"2026-06-01T05:34:04.091Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.484 ms - 74\u001b[0m","timestamp":"2026-06-01T05:34:04.840Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 118.666 ms - 379\u001b[0m","timestamp":"2026-06-01T05:34:09.396Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login/verify \u001b[32m200\u001b[0m 3.790 ms - 1080\u001b[0m","timestamp":"2026-06-01T05:34:32.702Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.14","timestamp":"2026-06-01T05:34:33.852Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.14","timestamp":"2026-06-01T05:34:33.852Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-01T05:34:34.273Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 1095.299 ms - 570\u001b[0m","timestamp":"2026-06-01T05:34:34.289Z"}
+{"level":"info","message":"\u001b[0mPUT /api/admin/payments/settings \u001b[32m200\u001b[0m 248.012 ms - 63\u001b[0m","timestamp":"2026-06-01T05:35:18.133Z"}
+{"level":"info","message":"\u001b[0mPUT /api/admin/payments/settings \u001b[32m200\u001b[0m 159.670 ms - 63\u001b[0m","timestamp":"2026-06-01T05:35:27.641Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.14","timestamp":"2026-06-01T05:35:51.538Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.14","timestamp":"2026-06-01T05:35:51.538Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-01T05:35:53.174Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 2174.835 ms - 570\u001b[0m","timestamp":"2026-06-01T05:35:53.176Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/payments/test-connection \u001b[32m200\u001b[0m 233.728 ms - 60\u001b[0m","timestamp":"2026-06-01T05:40:51.069Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/payments/test-connection \u001b[32m200\u001b[0m 275.808 ms - 60\u001b[0m","timestamp":"2026-06-01T05:41:03.753Z"}
+{"level":"info","message":"\u001b[0mGET /api/transactions/inquiry/status/877233 \u001b[33m404\u001b[0m 0.197 ms - 237\u001b[0m","timestamp":"2026-06-01T05:42:02.585Z"}
+{"level":"info","message":"\u001b[0mGET /favicon.ico \u001b[33m404\u001b[0m 0.167 ms - 210\u001b[0m","timestamp":"2026-06-01T05:42:02.766Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.14","timestamp":"2026-06-01T05:43:07.418Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.14","timestamp":"2026-06-01T05:43:07.418Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-01T05:43:07.606Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 393.777 ms - 570\u001b[0m","timestamp":"2026-06-01T05:43:07.607Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/logout \u001b[32m200\u001b[0m 1.510 ms - 44\u001b[0m","timestamp":"2026-06-01T05:43:20.240Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m401\u001b[0m 0.188 ms - 74\u001b[0m","timestamp":"2026-06-01T05:43:20.850Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-06-01T05:43:25.488Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m401\u001b[0m 112.845 ms - 95\u001b[0m","timestamp":"2026-06-01T05:43:25.489Z"}
+{"level":"info","message":"Email sent: <2824e8ab-7792-6299-2c46-2aa682979f20@cocogo.store>","timestamp":"2026-06-01T05:43:36.836Z"}
+{"level":"error","message":"403 - Email Anda belum diverifikasi. Kami telah mengirimkan ulang email verifikasi ke alamat email Anda. Silakan cek inbox atau folder spam. - /api/auth/login - POST - ::1","timestamp":"2026-06-01T05:43:36.836Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m403\u001b[0m 8570.627 ms - 209\u001b[0m","timestamp":"2026-06-01T05:43:36.837Z"}
+{"level":"info","message":"Email sent: <14d84f31-914a-fec4-de43-7731862c52a4@cocogo.store>","timestamp":"2026-06-01T05:44:03.316Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 8544.269 ms - 384\u001b[0m","timestamp":"2026-06-01T05:44:03.317Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login/verify \u001b[32m200\u001b[0m 134.879 ms - 1036\u001b[0m","timestamp":"2026-06-01T05:44:30.179Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 1.199 ms - 63\u001b[0m","timestamp":"2026-06-01T05:44:52.332Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 1.277 ms - 63\u001b[0m","timestamp":"2026-06-01T05:45:13.419Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/be9b0a33-fc09-4aec-a8f3-8eeac9c8f06a.png \u001b[33m404\u001b[0m 0.195 ms - 254\u001b[0m","timestamp":"2026-06-01T05:47:53.931Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/db727abe-1138-4728-9814-b668bfde6f02.png \u001b[33m404\u001b[0m 0.185 ms - 254\u001b[0m","timestamp":"2026-06-01T05:47:53.932Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/4e4f8c90-632d-4361-a077-c8d0147fe418.png \u001b[33m404\u001b[0m 0.155 ms - 254\u001b[0m","timestamp":"2026-06-01T05:47:53.933Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/72919168-9a1d-4014-bd14-b4d0f70c0620.png \u001b[33m404\u001b[0m 0.179 ms - 254\u001b[0m","timestamp":"2026-06-01T05:47:53.968Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/96c17665-24b6-43d2-aac3-70bca2c1970f.png \u001b[33m404\u001b[0m 0.228 ms - 254\u001b[0m","timestamp":"2026-06-01T05:47:53.970Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/f66df30e-5534-4d31-8f4a-f1033258ef16.png \u001b[33m404\u001b[0m 0.213 ms - 254\u001b[0m","timestamp":"2026-06-01T05:47:53.979Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/6af9aae3-c7e2-4daf-b31b-d9002c0adf6d.jpg \u001b[33m404\u001b[0m 10.587 ms - 254\u001b[0m","timestamp":"2026-06-01T05:47:53.997Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/c2eaf89c-0b61-4085-938c-69f60d050ede.png \u001b[33m404\u001b[0m 0.218 ms - 254\u001b[0m","timestamp":"2026-06-01T05:47:54.002Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/528b3214-a51c-428a-910f-f96c09d5ca00.png \u001b[33m404\u001b[0m 0.183 ms - 254\u001b[0m","timestamp":"2026-06-01T05:47:54.003Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/55ccc0dd-03e3-4414-8280-8026cfbae921.png \u001b[33m404\u001b[0m 0.169 ms - 254\u001b[0m","timestamp":"2026-06-01T05:47:54.004Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 1.640 ms - 63\u001b[0m","timestamp":"2026-06-01T05:49:49.980Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/be9b0a33-fc09-4aec-a8f3-8eeac9c8f06a.png \u001b[33m404\u001b[0m 0.194 ms - 254\u001b[0m","timestamp":"2026-06-01T05:49:50.274Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/db727abe-1138-4728-9814-b668bfde6f02.png \u001b[33m404\u001b[0m 0.170 ms - 254\u001b[0m","timestamp":"2026-06-01T05:49:50.276Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/4e4f8c90-632d-4361-a077-c8d0147fe418.png \u001b[33m404\u001b[0m 0.279 ms - 254\u001b[0m","timestamp":"2026-06-01T05:49:50.278Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/72919168-9a1d-4014-bd14-b4d0f70c0620.png \u001b[33m404\u001b[0m 0.213 ms - 254\u001b[0m","timestamp":"2026-06-01T05:49:50.289Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/96c17665-24b6-43d2-aac3-70bca2c1970f.png \u001b[33m404\u001b[0m 0.126 ms - 254\u001b[0m","timestamp":"2026-06-01T05:49:50.290Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/f66df30e-5534-4d31-8f4a-f1033258ef16.png \u001b[33m404\u001b[0m 0.332 ms - 254\u001b[0m","timestamp":"2026-06-01T05:49:50.291Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/6af9aae3-c7e2-4daf-b31b-d9002c0adf6d.jpg \u001b[33m404\u001b[0m 0.158 ms - 254\u001b[0m","timestamp":"2026-06-01T05:49:50.292Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/c2eaf89c-0b61-4085-938c-69f60d050ede.png \u001b[33m404\u001b[0m 0.163 ms - 254\u001b[0m","timestamp":"2026-06-01T05:49:50.294Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/528b3214-a51c-428a-910f-f96c09d5ca00.png \u001b[33m404\u001b[0m 0.106 ms - 254\u001b[0m","timestamp":"2026-06-01T05:49:50.294Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/55ccc0dd-03e3-4414-8280-8026cfbae921.png \u001b[33m404\u001b[0m 0.168 ms - 254\u001b[0m","timestamp":"2026-06-01T05:49:50.306Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 1.215 ms - 63\u001b[0m","timestamp":"2026-06-01T05:51:25.748Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/be9b0a33-fc09-4aec-a8f3-8eeac9c8f06a.png \u001b[33m404\u001b[0m 0.162 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:26.017Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/db727abe-1138-4728-9814-b668bfde6f02.png \u001b[33m404\u001b[0m 0.151 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:26.019Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/4e4f8c90-632d-4361-a077-c8d0147fe418.png \u001b[33m404\u001b[0m 0.200 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:26.031Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/72919168-9a1d-4014-bd14-b4d0f70c0620.png \u001b[33m404\u001b[0m 0.255 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:26.034Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/96c17665-24b6-43d2-aac3-70bca2c1970f.png \u001b[33m404\u001b[0m 0.162 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:26.035Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/f66df30e-5534-4d31-8f4a-f1033258ef16.png \u001b[33m404\u001b[0m 0.099 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:26.035Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/6af9aae3-c7e2-4daf-b31b-d9002c0adf6d.jpg \u001b[33m404\u001b[0m 0.118 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:26.036Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/c2eaf89c-0b61-4085-938c-69f60d050ede.png \u001b[33m404\u001b[0m 0.170 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:26.050Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/528b3214-a51c-428a-910f-f96c09d5ca00.png \u001b[33m404\u001b[0m 0.166 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:26.052Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/55ccc0dd-03e3-4414-8280-8026cfbae921.png \u001b[33m404\u001b[0m 0.166 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:26.053Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 2.766 ms - 63\u001b[0m","timestamp":"2026-06-01T05:51:30.970Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/be9b0a33-fc09-4aec-a8f3-8eeac9c8f06a.png \u001b[33m404\u001b[0m 0.174 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:31.456Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/db727abe-1138-4728-9814-b668bfde6f02.png \u001b[33m404\u001b[0m 0.157 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:31.462Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/4e4f8c90-632d-4361-a077-c8d0147fe418.png \u001b[33m404\u001b[0m 0.170 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:31.471Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/72919168-9a1d-4014-bd14-b4d0f70c0620.png \u001b[33m404\u001b[0m 0.169 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:31.477Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/96c17665-24b6-43d2-aac3-70bca2c1970f.png \u001b[33m404\u001b[0m 0.161 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:31.482Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/f66df30e-5534-4d31-8f4a-f1033258ef16.png \u001b[33m404\u001b[0m 0.166 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:31.516Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/6af9aae3-c7e2-4daf-b31b-d9002c0adf6d.jpg \u001b[33m404\u001b[0m 0.240 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:31.524Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/c2eaf89c-0b61-4085-938c-69f60d050ede.png \u001b[33m404\u001b[0m 0.154 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:31.528Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/528b3214-a51c-428a-910f-f96c09d5ca00.png \u001b[33m404\u001b[0m 0.159 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:31.532Z"}
+{"level":"info","message":"\u001b[0mGET /PAYMENT_METHOD/55ccc0dd-03e3-4414-8280-8026cfbae921.png \u001b[33m404\u001b[0m 0.156 ms - 254\u001b[0m","timestamp":"2026-06-01T05:51:31.558Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 1.873 ms - 63\u001b[0m","timestamp":"2026-06-01T05:55:17.284Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 1.621 ms - 63\u001b[0m","timestamp":"2026-06-01T06:00:21.076Z"}
+{"level":"info","message":"\u001b[0mPOST /api/deposit \u001b[32m201\u001b[0m 506.096 ms - 766\u001b[0m","timestamp":"2026-06-01T06:01:51.582Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 1.223 ms - 63\u001b[0m","timestamp":"2026-06-01T06:02:08.676Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 1.244 ms - 63\u001b[0m","timestamp":"2026-06-01T06:02:17.308Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 1.422 ms - 63\u001b[0m","timestamp":"2026-06-01T06:02:51.963Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T06:03:19.980Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T06:03:19.988Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T06:03:21.740Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T06:03:21.741Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T06:03:21.743Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T06:03:38.715Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T06:03:38.722Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T06:03:39.395Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T06:03:39.396Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T06:03:39.398Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 2.516 ms - 63\u001b[0m","timestamp":"2026-06-01T06:04:47.785Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 3.028 ms - 63\u001b[0m","timestamp":"2026-06-01T06:05:52.487Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 3.024 ms - 63\u001b[0m","timestamp":"2026-06-01T06:15:11.237Z"}
+{"level":"info","message":"\u001b[0mPOST /api/deposit/88d78f30-25f3-4ff0-937a-2b22be529e60/sync \u001b[32m200\u001b[0m 668.871 ms - 788\u001b[0m","timestamp":"2026-06-01T06:15:58.318Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 1.514 ms - 63\u001b[0m","timestamp":"2026-06-01T06:16:41.249Z"}
+{"data":{"amount":1000,"currency":"IDR","id":"f21f8d66-e762-4327-ad49-f343f187b152","reference":"DEP-1780293711077-2412","status":"paid"},"eventType":"deposit","level":"info","message":"DompetX Callback received","paymentId":"f21f8d66-e762-4327-ad49-f343f187b152","timestamp":"2026-06-01T06:18:19.889Z"}
+{"level":"error","message":"DompetX Callback Processing Error: Data truncated for column 'type' at row 1","timestamp":"2026-06-01T06:18:20.146Z"}
+{"level":"info","message":"\u001b[0mPOST /api/callbacks/dompetx \u001b[31m500\u001b[0m 257.882 ms - 72\u001b[0m","timestamp":"2026-06-01T06:18:20.147Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T06:20:23.762Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T06:20:23.769Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T06:20:24.514Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T06:20:24.515Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T06:20:24.519Z"}
+{"data":{"amount":1000,"currency":"IDR","id":"f21f8d66-e762-4327-ad49-f343f187b152","reference":"DEP-1780293711077-2412","status":"paid"},"eventType":"deposit","level":"info","message":"DompetX Callback received","paymentId":"f21f8d66-e762-4327-ad49-f343f187b152","timestamp":"2026-06-01T06:20:35.401Z"}
+{"level":"info","message":"Deposit DEP-1780293711077-2412 marked as PAID and balance updated.","timestamp":"2026-06-01T06:20:35.684Z"}
+{"level":"info","message":"\u001b[0mPOST /api/callbacks/dompetx \u001b[32m200\u001b[0m 286.713 ms - 51\u001b[0m","timestamp":"2026-06-01T06:20:35.689Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 8.363 ms - 63\u001b[0m","timestamp":"2026-06-01T06:20:54.402Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 2.704 ms - 63\u001b[0m","timestamp":"2026-06-01T06:23:42.760Z"}
+{"level":"info","message":"\u001b[0mPOST /api/deposit \u001b[32m201\u001b[0m 452.530 ms - 769\u001b[0m","timestamp":"2026-06-01T06:51:24.148Z"}
+{"data":{"amount":1000,"currency":"IDR","id":"e4c511b3-9ed8-4fde-86f3-2ce552f5c3ae","reference":"DEP-1780296683698-9493","status":"paid"},"eventType":"deposit","level":"info","message":"DompetX Callback received","paymentId":"e4c511b3-9ed8-4fde-86f3-2ce552f5c3ae","timestamp":"2026-06-01T06:52:06.345Z"}
+{"level":"info","message":"Deposit DEP-1780296683698-9493 marked as PAID and balance updated.","timestamp":"2026-06-01T06:52:06.540Z"}
+{"level":"info","message":"\u001b[0mPOST /api/callbacks/dompetx \u001b[32m200\u001b[0m 195.974 ms - 51\u001b[0m","timestamp":"2026-06-01T06:52:06.541Z"}
+{"level":"info","message":"\u001b[0mPOST /api/deposit/f2c6ab11-09b5-4a9b-9bf9-5b8a6d28e38c/sync \u001b[32m200\u001b[0m 2.752 ms - 810\u001b[0m","timestamp":"2026-06-01T06:52:14.022Z"}
+{"level":"info","message":"\u001b[0mGET /api/admin/configs \u001b[33m403\u001b[0m 2.194 ms - 63\u001b[0m","timestamp":"2026-06-01T06:57:43.507Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/logout \u001b[32m200\u001b[0m 1.801 ms - 44\u001b[0m","timestamp":"2026-06-01T07:04:53.116Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 110.064 ms - 379\u001b[0m","timestamp":"2026-06-01T07:05:44.351Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login/verify \u001b[32m200\u001b[0m 3.484 ms - 1080\u001b[0m","timestamp":"2026-06-01T07:06:12.939Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.14","timestamp":"2026-06-01T07:06:52.450Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.14","timestamp":"2026-06-01T07:06:52.451Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-01T07:06:52.686Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 658.554 ms - 570\u001b[0m","timestamp":"2026-06-01T07:06:52.688Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-01T07:07:13.112Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.14","timestamp":"2026-06-01T07:07:13.121Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.14","timestamp":"2026-06-01T07:07:13.121Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 184.488 ms - 570\u001b[0m","timestamp":"2026-06-01T07:07:13.123Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-01T07:31:30.008Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.14","timestamp":"2026-06-01T07:31:30.012Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.14","timestamp":"2026-06-01T07:31:30.012Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 254.069 ms - 570\u001b[0m","timestamp":"2026-06-01T07:31:30.014Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-01T07:37:30.992Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.14","timestamp":"2026-06-01T07:37:30.997Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.14","timestamp":"2026-06-01T07:37:30.997Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 918.555 ms - 570\u001b[0m","timestamp":"2026-06-01T07:37:31.000Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T07:43:22.966Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T08:27:20.327Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T08:27:20.477Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T08:27:20.822Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T08:27:20.822Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T08:27:20.825Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 116.266 ms - 379\u001b[0m","timestamp":"2026-06-01T08:28:07.883Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login/verify \u001b[32m200\u001b[0m 5.478 ms - 1080\u001b[0m","timestamp":"2026-06-01T08:28:20.506Z"}
+{"level":"info","message":"OkeConnect Balance Response: IP tidak sesuai @125.163.141.14","timestamp":"2026-06-01T08:28:21.790Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.141.14","timestamp":"2026-06-01T08:28:21.791Z"}
+{"level":"error","message":"Sync DigiFlazz Balance Error: {\"data\":{\"rc\":\"41\",\"deposit\":0,\"message\":\"Signature Anda salah\"}}","timestamp":"2026-06-01T08:28:22.152Z"}
+{"level":"info","message":"\u001b[0mPOST /api/admin/balances/vendors/sync \u001b[32m200\u001b[0m 1040.225 ms - 570\u001b[0m","timestamp":"2026-06-01T08:28:22.165Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/logout \u001b[32m200\u001b[0m 2.754 ms - 44\u001b[0m","timestamp":"2026-06-01T08:28:26.292Z"}
+{"level":"info","message":"Email sent: <c7df91d9-a9d0-6869-4413-783242ae4dd8@cocogo.store>","timestamp":"2026-06-01T08:28:41.734Z"}
+{"level":"error","message":"403 - Email Anda belum diverifikasi. Kami telah mengirimkan ulang email verifikasi ke alamat email Anda. Silakan cek inbox atau folder spam. - /api/auth/login - POST - ::1","timestamp":"2026-06-01T08:28:41.736Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m403\u001b[0m 9780.084 ms - 209\u001b[0m","timestamp":"2026-06-01T08:28:41.737Z"}
+{"level":"info","message":"Email sent: <45e0f052-8098-3089-71c7-0f216634cb8b@cocogo.store>","timestamp":"2026-06-01T08:28:58.438Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[32m200\u001b[0m 8368.225 ms - 384\u001b[0m","timestamp":"2026-06-01T08:28:58.440Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login/verify \u001b[32m200\u001b[0m 113.289 ms - 1036\u001b[0m","timestamp":"2026-06-01T08:29:17.527Z"}
+{"level":"info","message":"\u001b[0mPOST /api/deposit \u001b[32m201\u001b[0m 556.055 ms - 409\u001b[0m","timestamp":"2026-06-01T08:29:27.889Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T08:33:53.070Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T08:33:53.077Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T08:33:53.754Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T08:33:53.755Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T08:33:53.757Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T08:34:13.389Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T08:34:13.396Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T08:34:14.454Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T08:34:14.455Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T08:34:14.459Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T08:34:15.230Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T08:34:15.238Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T08:34:15.758Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T08:34:15.759Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T08:34:15.762Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T08:36:00.247Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T08:36:00.255Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T08:36:01.064Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T08:36:01.064Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T08:36:01.067Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T08:36:14.743Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T08:36:14.750Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T08:36:15.936Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T08:36:15.937Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T08:36:15.940Z"}
+{"level":"info","message":"\u001b[0mPOST /api/deposit/8db86c95-aa88-4f36-8cbf-89612c674232/sync \u001b[32m200\u001b[0m 299.155 ms - 1267\u001b[0m","timestamp":"2026-06-01T08:40:47.025Z"}
+{"level":"info","message":"\u001b[0mPOST /api/deposit \u001b[32m201\u001b[0m 585.148 ms - 1908\u001b[0m","timestamp":"2026-06-01T08:42:13.493Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T08:48:55.318Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T08:48:55.325Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T08:48:56.791Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T08:48:56.791Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T08:48:56.794Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T08:52:33.758Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T10:03:07.364Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T10:03:07.544Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T10:03:07.861Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T10:03:07.862Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T10:03:07.866Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T10:12:15.673Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T10:12:15.680Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T10:12:18.617Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T10:12:18.617Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T10:12:18.622Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T10:21:38.935Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T10:21:38.965Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T10:21:40.599Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T10:21:40.606Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T10:21:41.561Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T10:21:41.564Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T10:21:41.568Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T10:25:46.071Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T10:25:46.078Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T10:25:47.248Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T10:25:47.248Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T10:25:47.251Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T10:27:22.944Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T10:27:22.956Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T10:27:23.652Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T10:27:23.652Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T10:27:23.654Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T10:27:37.281Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T10:27:37.289Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T10:27:38.023Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T10:27:38.024Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T10:27:38.028Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T10:27:39.017Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T10:27:39.023Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T10:27:39.832Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T10:27:39.833Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T10:27:39.836Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 120s)","timestamp":"2026-06-01T10:27:39.837Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T10:30:57.774Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T10:30:57.783Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T10:30:58.824Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T10:30:58.825Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T10:30:58.829Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T10:30:58.829Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T10:37:02.216Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T10:37:02.224Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T10:37:03.017Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T10:37:03.017Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T10:37:03.020Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T10:37:03.020Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T10:38:05.694Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T10:38:05.700Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T10:38:06.614Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T10:38:06.614Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T10:38:06.618Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T10:38:06.619Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T10:41:56.082Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T10:41:56.089Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T10:41:56.888Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T10:41:56.889Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T10:41:56.894Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T10:41:56.894Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T10:41:57.974Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T10:41:57.981Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T10:41:59.170Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T10:41:59.171Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T10:41:59.173Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T10:41:59.173Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/telegram/status \u001b[33m404\u001b[0m 1.132 ms - 224\u001b[0m","timestamp":"2026-06-01T10:51:42.973Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/telegram/status \u001b[33m404\u001b[0m 0.783 ms - 224\u001b[0m","timestamp":"2026-06-01T10:51:59.392Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/telegram/status \u001b[33m404\u001b[0m 0.319 ms - 224\u001b[0m","timestamp":"2026-06-01T10:52:34.723Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T10:53:28.221Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T10:53:28.228Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T10:53:28.953Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T10:53:28.954Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T10:53:28.957Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T10:53:28.958Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T11:03:18.727Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T11:03:18.734Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T11:03:20.190Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T11:03:20.191Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T11:03:20.193Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T11:03:20.194Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T11:03:26.583Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T11:03:26.590Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T11:03:27.459Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T11:03:27.463Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T11:03:27.466Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T11:03:27.469Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T11:08:53.227Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T11:08:53.235Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T11:08:54.505Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T11:08:54.506Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T11:08:54.509Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T11:08:54.510Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T11:15:40.363Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T11:15:40.372Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T11:15:41.848Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T11:15:41.849Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T11:15:41.851Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T11:15:41.851Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T11:20:02.871Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T11:20:02.880Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T11:20:04.820Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T11:20:04.827Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T11:20:05.701Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T11:20:05.702Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T11:20:05.706Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T11:20:05.706Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T11:26:34.154Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T11:26:34.161Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T11:26:35.253Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T11:26:35.254Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T11:26:35.258Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T11:26:35.259Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T11:33:04.495Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T11:33:04.504Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T11:33:05.739Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T11:33:05.740Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T11:33:05.744Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T11:33:05.744Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T11:33:15.325Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T11:33:15.332Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T11:33:16.608Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T11:33:16.609Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T11:33:16.611Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T11:33:16.611Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T11:47:15.417Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T11:47:15.425Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T11:47:16.880Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T11:47:16.888Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T11:47:18.382Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T11:47:18.382Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T11:47:18.389Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T11:47:18.389Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T11:49:51.384Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T11:49:51.393Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T11:49:53.096Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T11:49:53.097Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T11:49:53.100Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T11:49:53.100Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T11:49:59.581Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T11:49:59.590Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T11:50:01.103Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T11:50:01.104Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T11:50:01.106Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T11:50:01.106Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T11:50:44.865Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T11:50:44.876Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T11:50:46.385Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T11:50:46.393Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T11:50:47.595Z"}
+{"level":"info","message":"Database seeding completed successfully","timestamp":"2026-06-01T11:50:47.596Z"}
+{"level":"info","message":"Server is running on port 3000","timestamp":"2026-06-01T11:50:47.598Z"}
+{"level":"info","message":"[Scheduler] Deposit expiry scheduler started (interval: 600s)","timestamp":"2026-06-01T11:50:47.599Z"}
+{"level":"info","message":"Connected to database successfully (mysql2)","timestamp":"2026-06-01T12:02:00.927Z"}
+{"level":"info","message":"Checking web configurations...","timestamp":"2026-06-01T12:02:00.934Z"}
+{"level":"info","message":"Web configurations synchronized with environment defaults","timestamp":"2026-06-01T12:02:03.527Z"}

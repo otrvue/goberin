@@ -1,0 +1,52 @@
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T18:41:41.826Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T18:58:31.432Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T18:58:46.140Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:06:02.457Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:06:04.563Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:11:56.908Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:12:01.716Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:12:34.318Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:12:58.667Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:13:44.910Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:14:19.950Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:15:35.857Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:15:50.538Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:16:00.224Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:16:14.631Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:17:04.704Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:18:54.930Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:19:17.825Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:23:58.566Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T19:58:37.975Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T21:49:00.117Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T21:50:32.217Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T21:50:36.827Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T21:50:43.766Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T21:51:32.780Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T21:51:38.497Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T21:55:35.689Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T21:55:40.303Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T21:55:47.519Z"}
+{"level":"error","message":"400 - Kode OTP tidak valid - /api/auth/login/verify - POST - ::1","timestamp":"2026-05-28T21:56:11.962Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T21:56:31.805Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.136.19","timestamp":"2026-05-28T21:58:31.246Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T21:58:37.419Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:37:10.239Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:37:18.338Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:37:27.209Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:37:41.794Z"}
+{"level":"error","message":"400 - Email already registered - /api/auth/register - POST - ::1","timestamp":"2026-05-28T22:37:53.723Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:38:05.222Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:38:09.655Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:38:22.759Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:38:27.826Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:38:50.618Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-28T22:40:40.785Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T05:44:39.021Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T05:44:44.821Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T05:44:54.675Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T06:12:58.229Z"}
+{"level":"error","message":"401 - Invalid credentials - /api/auth/login - POST - ::1","timestamp":"2026-05-29T06:14:11.823Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T06:15:13.482Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T06:24:57.674Z"}
+{"level":"error","message":"Sync OkeConnect Balance Error: IP tidak sesuai @125.163.139.130","timestamp":"2026-05-29T06:27:09.501Z"}
